@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>KAIZEN AI — Manufacturing Decision Intelligence V__KAIZEN_VERSION__</title>
+<link href="/static/styles.css?build=__KAIZEN_BUILD_ID__" rel="stylesheet"/>
+<script>window.KAIZEN_EXPECTED_VERSION="__KAIZEN_VERSION__";window.KAIZEN_EXPECTED_BUILD="__KAIZEN_BUILD_ID__";</script>
+</head>
+<body><div class="app-layout"><aside class="side-nav" id="sideNav">
+<div class="side-brand"><span class="brand-mark">K</span><div><b>KAIZEN AI</b><small>V__KAIZEN_VERSION__</small></div></div>
+<nav>
+<button class="nav-item active" data-workspace-target="mission"><span>⌂</span>Mission Control</button>
+<button class="nav-item" data-workspace-target="measure"><span>σ</span>Measure</button>
+<button class="nav-item" data-workspace-target="operations"><span>↻</span>Operations</button>
+<button class="nav-item" data-workspace-target="diagnose"><span>◎</span>Diagnose</button>
+<button class="nav-item" data-workspace-target="decide"><span>◇</span>Decide</button>
+<button class="nav-item" data-workspace-target="validate"><span>✓</span>Validate</button>
+<button class="nav-item" data-workspace-target="data"><span>⇄</span>Data</button>
+</nav>
+<div class="side-context"><span>RUN</span><b id="contextRun">No run</b><span>SOURCE</span><b id="contextMode">HIDDEN FACTORY</b><span>SUSPECT</span><b id="contextSuspect">—</b><span>L5</span><b id="contextL5">LOCKED</b></div>
+<button class="mobile-nav-toggle" id="mobileNavToggle">☰</button>
+</aside><div class="app-content"><div class="build-mismatch" hidden="" id="buildMismatch"></div><main class="shell">
+<header>
+<div>
+<p class="eyebrow">KAIZEN AI / ENGINEERING BUILD</p>
+<h1>Manufacturing Decision Intelligence <span>V__KAIZEN_VERSION__</span></h1>
+<p class="lede">A control-room for Lean Six Sigma, Industrial Engineering, statistical diagnosis, counterfactual simulation, OR optimization, active investigation and tool-grounded AI.</p>
+</div>
+<div class="status" id="health">Checking system…</div>
+<div class="header-actions"><button class="ghost-action" id="reportBtn">ENGINEERING REPORT</button></div></header><section class="panel mission-control workspace-section active-workspace" data-workspace="mission" id="missionDashboard">
+<div class="section-head">
+<div><p class="eyebrow">MISSION CONTROL</p><h2>One incident. One decision story.</h2><p>See the executive state here; open a workspace only when you need the engineering detail.</p></div>
+<span class="badge" id="missionMode">HIDDEN FACTORY</span>
+</div>
+<div class="mission-kpis">
+<div><span>Defect rate</span><strong id="missionDefect">—</strong><small id="missionDefectDelta">No run</small></div>
+<div><span>Good throughput</span><strong id="missionGood">—</strong><small>units / hour</small></div>
+<div><span>Leading diagnosis</span><strong id="missionSuspect">—</strong><small id="missionEvidence">Awaiting evidence</small></div>
+<div><span>Decision</span><strong id="missionDecision">—</strong><small id="missionOptimizer">Awaiting optimization</small></div>
+<div><span>Causal level</span><strong id="missionL5">LOCKED</strong><small id="missionUncertainty">No experiment</small></div>
+</div>
+<div class="dmaic-rail" id="dmaicRail">
+<button data-jump="measure"><span>01</span><b>MEASURE</b><small>Quality + MSA + SPC</small></button>
+<button data-jump="operations"><span>02</span><b>FLOW</b><small>IE + capacity + WIP</small></button>
+<button data-jump="diagnose"><span>03</span><b>DIAGNOSE</b><small>Hypotheses + evidence</small></button>
+<button data-jump="decide"><span>04</span><b>DECIDE</b><small>Simulation + MILP</small></button>
+<button data-jump="validate"><span>05</span><b>VALIDATE / CONTROL</b><small>VOI + DOE + L5 + sustain</small></button>
+</div>
+</section>
+<section class="hero-grid workspace-section active-workspace" data-workspace="mission">
+<article class="panel action-panel">
+<p class="eyebrow">BLIND INCIDENT</p>
+<h2>Break the Factory</h2>
+<p>Inject one of six causal disturbances. The mechanism remains sealed while observable data flows into Lean Six Sigma analysis.</p>
+<div class="controls">
+<label>Seed <input id="seed" min="0" type="number" value="42"/></label>
+<label>Units <input id="units" max="250000" min="100" type="number" value="2500"/></label>
+</div>
+<button class="primary" id="breakBtn">BREAK THE FACTORY</button>
+</article>
+<article class="panel" id="incidentPanel">
+<p class="eyebrow">CURRENT CASE</p>
+<h2 id="runId">No incident loaded</h2>
+<p id="symptom">Create a blind incident to generate production data.</p>
+<div class="metric-grid">
+<div><span>Pre defect rate</span><strong id="preDef">—</strong></div>
+<div><span>Post defect rate</span><strong id="postDef">—</strong></div>
+<div><span>Pre queue wait</span><strong id="preWait">—</strong></div>
+<div><span>Post queue wait</span><strong id="postWait">—</strong></div>
+</div>
+</article>
+</section>
+<section class="panel truth-panel workspace-section active-workspace" data-workspace="mission">
+<div>
+<p class="eyebrow">CAUSAL FIREWALL</p>
+<h2>Ground truth is sealed</h2>
+<p id="truthText">The analytical layer can use only observable production records. It cannot read the injected mechanism.</p>
+</div>
+<button class="danger" disabled="" id="revealBtn">REVEAL + SCORE</button>
+</section>
+<section class="panel quality-header workspace-section" data-workspace="measure">
+<div class="section-head">
+<div>
+<p class="eyebrow">DEFINE / MEASURE</p>
+<h2>Lean Six Sigma evidence layer</h2>
+<p id="problemStatement">Break the factory to establish a DMAIC problem statement and measurement baseline.</p>
+</div>
+<span class="badge" id="qualityState">Awaiting run</span>
+</div>
+<div class="metric-grid quality-metrics">
+<div><span>Data quality</span><strong id="dqScore">—</strong></div>
+<div><span>COPQ / 1,000 units</span><strong id="copq">—</strong></div>
+<div><span>Torque Cpk pre → post</span><strong id="torqueCpk">—</strong></div>
+<div><span>Gage R&amp;R study variation</span><strong id="grr">—</strong></div>
+</div>
+</section>
+<section class="quality-grid workspace-section" data-workspace="measure">
+<article class="panel">
+<p class="eyebrow">PARETO / COPQ</p>
+<h2>What is costing us?</h2>
+<div class="bars" id="paretoBars"><p class="empty">No analysis yet.</p></div>
+<div class="mini-note" id="copqBreakdown"></div>
+</article>
+<article class="panel">
+<p class="eyebrow">MSA</p>
+<h2>Can we trust the measurement system?</h2>
+<div class="metric-grid compact">
+<div><span>Status</span><strong id="grrStatus">—</strong></div>
+<div><span>ndc</span><strong id="ndc">—</strong></div>
+</div>
+<div class="table-wrap small-table">
+<table>
+<thead><tr><th>Gage</th><th>N</th><th>Mean torque error</th><th>SD</th><th>Defect rate</th></tr></thead>
+<tbody id="gageBody"><tr><td class="empty" colspan="5">No analysis yet.</td></tr></tbody>
+</table>
+</div>
+</article>
+</section>
+<section class="panel workspace-section" data-workspace="measure">
+<div class="section-head">
+<div>
+<p class="eyebrow">PROCESS CAPABILITY</p>
+<h2>Pre/post capability baseline</h2>
+<p>Cp/Cpk use an I-MR within-sigma estimator; Pp/Ppk use overall sample variation.</p>
+</div>
+<span class="badge">Observable data only</span>
+</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Metric</th><th>Scope</th><th>Phase</th><th>N</th><th>Mean</th><th>Cp</th><th>Cpk</th><th>Pp</th><th>Ppk</th><th>Status</th></tr></thead>
+<tbody id="capBody"><tr><td class="empty" colspan="10">No analysis yet.</td></tr></tbody>
+</table>
+</div>
+</section>
+<section class="panel workspace-section" data-workspace="measure">
+<div class="section-head">
+<div>
+<p class="eyebrow">SPC</p>
+<h2>Torque error I-MR monitoring</h2>
+<p id="spcNote">Limits will be estimated from the pre-incident baseline and held fixed after activation.</p>
+</div>
+<span class="badge" id="spcSignals">0 signals</span>
+</div>
+<div class="chart empty-chart" id="spcChart">No analysis yet.</div>
+<div class="mini-note" id="spcLimits"></div>
+</section>
+<section class="panel ie-header workspace-section" data-workspace="operations">
+<div class="section-head">
+<div>
+<p class="eyebrow">INDUSTRIAL ENGINEERING</p>
+<h2>Flow, capacity &amp; operations evidence layer</h2>
+<p id="ieSummary">Break the factory to quantify takt, throughput, WIP, Little's Law, bottlenecks, line balance, queueing and OEE.</p>
+</div>
+<span class="badge" id="ieState">Awaiting run</span>
+</div>
+<div class="metric-grid quality-metrics">
+<div><span>Customer takt</span><strong id="taktMetric">—</strong></div>
+<div><span>Post throughput</span><strong id="throughputMetric">—</strong></div>
+<div><span>Post average WIP</span><strong id="wipMetric">—</strong></div>
+<div><span>Post calibration OEE</span><strong id="oeeMetric">—</strong></div>
+</div>
+</section>
+<section class="quality-grid workspace-section" data-workspace="operations">
+<article class="panel">
+<p class="eyebrow">FLOW / LITTLE'S LAW</p>
+<h2>Are we moving product effectively?</h2>
+<div class="table-wrap small-table">
+<table>
+<thead><tr><th>Phase</th><th>Throughput /h</th><th>Good /h</th><th>Lead s</th><th>Avg WIP</th><th>Max WIP</th><th>LL error</th></tr></thead>
+<tbody id="flowBody"><tr><td class="empty" colspan="7">No analysis yet.</td></tr></tbody>
+</table>
+</div>
+<div class="mini-note" id="flowNote"></div>
+</article>
+<article class="panel">
+<p class="eyebrow">QUEUEING</p>
+<h2>What is happening at calibration?</h2>
+<div class="table-wrap small-table">
+<table>
+<thead><tr><th>Phase</th><th>λ /h</th><th>μ /h</th><th>Mean wait</th><th>Queue WIP</th><th>Max queue</th><th>P(wait)</th></tr></thead>
+<tbody id="queueBody"><tr><td class="empty" colspan="7">No analysis yet.</td></tr></tbody>
+</table>
+</div>
+<div class="mini-note" id="queueNote"></div>
+</article>
+</section>
+<section class="panel workspace-section" data-workspace="operations">
+<div class="section-head">
+<div>
+<p class="eyebrow">CAPACITY / BOTTLENECK</p>
+<h2>Where does the line run out of capacity?</h2>
+<p id="bottleneckNote">Station capacity is calculated from observed mean service time and compared with customer demand and actual release rate.</p>
+</div>
+<span class="badge" id="bottleneckBadge">Awaiting run</span>
+</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Station</th><th>Phase</th><th>Mean service s</th><th>P95 s</th><th>Capacity /h</th><th>Demand util.</th><th>Release util.</th><th>Status</th></tr></thead>
+<tbody id="capacityBody"><tr><td class="empty" colspan="8">No analysis yet.</td></tr></tbody>
+</table>
+</div>
+</section>
+<section class="quality-grid workspace-section" data-workspace="operations">
+<article class="panel">
+<p class="eyebrow">LINE BALANCE</p>
+<h2>How balanced is the work?</h2>
+<div class="metric-grid compact">
+<div><span>Pre efficiency</span><strong id="balancePre">—</strong></div>
+<div><span>Post efficiency</span><strong id="balancePost">—</strong></div>
+<div><span>Post cycle time</span><strong id="cyclePost">—</strong></div>
+<div><span>Post smoothness</span><strong id="smoothPost">—</strong></div>
+</div>
+<div class="mini-note" id="balanceNote"></div>
+</article>
+<article class="panel">
+<p class="eyebrow">VALUE STREAM</p>
+<h2>How much lead time creates value?</h2>
+<div class="metric-grid compact">
+<div><span>Pre PCE</span><strong id="pcePre">—</strong></div>
+<div><span>Post PCE</span><strong id="pcePost">—</strong></div>
+<div><span>Post value-added</span><strong id="vaPost">—</strong></div>
+<div><span>Post waiting</span><strong id="waitPost">—</strong></div>
+</div>
+<div class="mini-note" id="valueStreamNote"></div>
+</article>
+</section>
+<section class="panel workspace-section" data-workspace="operations">
+<div class="section-head">
+<div>
+<p class="eyebrow">OEE DIAGNOSTIC</p>
+<h2>Calibration-cell effectiveness</h2>
+<p>Performance uses ideal product-specific calibration time versus observed busy time; quality is observed FPY.</p>
+</div>
+<span class="badge warn-badge" id="oeeAssumption">Availability assumption visible</span>
+</div>
+<div class="table-wrap small-table">
+<table>
+<thead><tr><th>Phase</th><th>Availability</th><th>Performance</th><th>Quality</th><th>OEE</th><th>Availability status</th></tr></thead>
+<tbody id="oeeBody"><tr><td class="empty" colspan="6">No analysis yet.</td></tr></tbody>
+</table>
+</div>
+<div class="mini-note" id="oeeNote"></div>
+</section>
+<section class="panel investigator-header workspace-section" data-workspace="diagnose">
+<div class="section-head">
+<div>
+<p class="eyebrow">ANALYZE / STATISTICAL INVESTIGATOR</p>
+<h2>What is most strongly supported by the observable evidence?</h2>
+<p id="investigatorSummary">Break the factory to rank competing equipment, measurement, material, fixture/environment and flow hypotheses.</p>
+</div>
+<span class="badge" id="investigatorState">Awaiting run</span>
+</div>
+<div class="metric-grid quality-metrics">
+<div><span>Leading suspect</span><strong id="topSuspectShort">—</strong></div>
+<div><span>Evidence score</span><strong id="topEvidenceScore">—</strong></div>
+<div><span>Status</span><strong id="topHypothesisStatus">—</strong></div>
+<div><span>Ambiguity</span><strong id="ambiguityMetric">—</strong></div>
+</div>
+<div class="causal-warning"><strong>Correlation ≠ Cause:</strong> V0.4 may rank a suspect, but it cannot label a root cause. Intervention / DOE confirmation remains locked.</div>
+</section>
+<section class="panel arena-panel workspace-section" data-workspace="diagnose">
+<div class="section-head">
+<div>
+<p class="eyebrow">BREAK THE FACTORY / INVESTIGATION ARENA</p>
+<h2>Can KAIZEN diagnose the incident before seeing the answer?</h2>
+<p>Prediction is frozen from observable evidence. Ground truth is used only after explicit reveal to score mechanism, target, direction and interaction attribution.</p>
+</div>
+<span class="badge">BLIND UNTIL REVEAL</span>
+</div>
+<div class="metric-grid quality-metrics">
+<div><span>Frozen prediction</span><strong id="arenaPrediction">—</strong></div>
+<div><span>Evidence</span><strong id="arenaScorePreview">—</strong></div>
+<div><span>Status</span><strong id="arenaStatus">—</strong></div>
+<div><span>Ambiguity</span><strong id="arenaAmbiguity">—</strong></div>
+</div>
+<div class="arena-grid">
+<div>
+<p class="eyebrow">INVESTIGATION TIMELINE</p>
+<div class="timeline" id="arenaTimeline"><p class="empty">No blind investigation yet.</p></div>
+<div class="mini-note" id="arenaPolicy"></div>
+</div>
+<div class="scorecard" hidden="" id="arenaScorecard">
+<p class="eyebrow">REVEAL SCORECARD</p>
+<h2>Diagnosis vs sealed truth</h2>
+<div class="metric-grid compact">
+<div><span>Attribution score</span><strong id="arenaFinalScore">—</strong></div>
+<div><span>Dimensions</span><strong id="arenaDimensions">—</strong></div>
+</div>
+<div class="score-grade" id="arenaGrade">—</div>
+<div class="score-checks" id="arenaChecks"></div>
+</div>
+</div>
+<div class="causal-warning" id="arenaScoreText">Reveal the sealed answer only after reviewing the blind diagnosis.</div>
+</section>
+<section class="panel simulation-panel workspace-section" data-workspace="decide">
+<div class="section-head">
+<div>
+<p class="eyebrow">IMPROVE / PROCESS SIMULATION</p>
+<h2>What happens if we actually intervene?</h2>
+<p id="simulationSummary">Break the factory to run a paired counterfactual replay against the blind diagnosis.</p>
+</div>
+<span class="badge" id="simulationState">Awaiting run</span>
+</div>
+<div class="metric-grid quality-metrics">
+<div><span>Recommended action</span><strong id="simRecommended">—</strong></div>
+<div><span>Defect rate</span><strong id="simDefect">—</strong></div>
+<div><span>Good throughput</span><strong id="simGoodThroughput">—</strong></div>
+<div><span>COPQ / 1,000</span><strong id="simCopq">—</strong></div>
+</div>
+<div class="simulation-controls">
+<label>Intervention
+          <select id="simIntervention"><option value="">Awaiting run</option></select>
+</label>
+<label>Effectiveness % <input id="simEffectiveness" max="100" min="0" step="5" type="number" value="100"/></label>
+<label>Demand multiplier <input id="simDemand" max="1.75" min="0.5" step="0.05" type="number" value="1.00"/></label>
+<button class="primary" disabled="" id="simulateBtn">RUN WHAT-IF</button>
+</div>
+<div class="sim-compare">
+<div class="sim-card baseline"><span>BASELINE</span><strong id="simBaselineHeadline">—</strong><p id="simBaselineDetail">No simulation yet.</p></div>
+<div class="sim-arrow">→</div>
+<div class="sim-card counterfactual"><span>COUNTERFACTUAL</span><strong id="simCounterHeadline">—</strong><p id="simCounterDetail">No simulation yet.</p></div>
+</div>
+<div class="causal-warning" id="simulationGuardrail">Simulation remains locked to observable evidence and does not count as DOE/intervention confirmation.</div>
+<div class="mini-note" id="simulationUncertainty"></div>
+<div class="table-wrap small-table">
+<table>
+<thead><tr><th>Candidate intervention</th><th>Target</th><th>Evidence</th><th>Δ defect pp</th><th>Δ lead s</th><th>Δ COPQ / 1k</th><th>Cost</th><th>Downtime</th></tr></thead>
+<tbody id="simulationCandidates"><tr><td class="empty" colspan="8">No simulations yet.</td></tr></tbody>
+</table>
+</div>
+<div class="mini-note" id="simulationPolicy"></div>
+</section>
+<section class="panel optimizer-panel workspace-section" data-workspace="decide">
+<div class="section-head">
+<div>
+<p class="eyebrow">DECIDE / IMPROVEMENT PORTFOLIO OPTIMIZER</p>
+<h2>Given real constraints, what should we actually do?</h2>
+<p id="optimizerMethod">Break the factory to solve the six-action binary decision problem.</p>
+</div>
+<span class="badge" id="optimizerState">Awaiting run</span>
+</div>
+<div class="metric-grid quality-metrics">
+<div><span>Solver status</span><strong id="optimizerStatus">—</strong></div>
+<div><span>Selected portfolio</span><strong id="optimizerPortfolio">—</strong></div>
+<div><span>Cost</span><strong id="optimizerCost">—</strong></div>
+<div><span>Planned downtime</span><strong id="optimizerDowntime">—</strong></div>
+<div><span>First-year net value</span><strong id="optimizerValue">—</strong></div>
+</div>
+<div class="simulation-controls optimizer-controls">
+<label>Budget $ <input id="optBudget" min="0" step="500" type="number" value="25000"/></label>
+<label>Max downtime h <input id="optDowntime" min="0" step="0.5" type="number" value="8"/></label>
+<label>Min good throughput /h <input id="optGood" min="0" step="1" type="number" value="80"/></label>
+<label>Max defect % <input id="optDefect" max="100" min="0" step="0.5" type="number" value="100"/></label>
+<label>Annual volume <input id="optAnnualVolume" min="1" step="10000" type="number" value="200000"/></label>
+<label>Effectiveness % <input id="optEffectiveness" max="100" min="0" step="5" type="number" value="100"/></label>
+<label>Demand multiplier <input id="optDemand" max="1.75" min="0.5" step="0.05" type="number" value="1.00"/></label>
+<label>Min evidence score <input id="optEvidence" max="100" min="0" step="5" type="number" value="25"/></label>
+<button class="primary" disabled="" id="optimizeBtn">OPTIMIZE PORTFOLIO</button>
+</div>
+<div class="causal-warning" id="optimizerResult">The optimizer maximizes modeled first-year COPQ value; throughput is a hard constraint and is not monetized.</div>
+<div class="table-wrap small-table">
+<table>
+<thead><tr><th>Rank</th><th>Portfolio</th><th>Cost</th><th>Downtime</th><th>Good /h</th><th>Defect</th><th>Net value</th><th>ROI</th></tr></thead>
+<tbody id="optimizerTopBody"><tr><td class="empty" colspan="8">No optimization yet.</td></tr></tbody>
+</table>
+</div>
+<div class="mini-note" id="optimizerPolicy"></div>
+</section>
+<section class="panel active-panel workspace-section" data-workspace="validate">
+<div class="section-head">
+<div>
+<p class="eyebrow">V0.9 / ACTIVE INVESTIGATION + CAUSAL VALIDATION</p>
+<h2>Know when not to know — then buy the next best piece of evidence</h2>
+<p>KAIZEN can now declare uncertainty, rank the next measurement by decision value, let a human compete, and execute a predeclared controlled synthetic DOE before unlocking Level 5.</p>
+</div>
+<span class="badge" id="activeState">Awaiting run</span>
+</div>
+<div class="metric-grid quality-metrics">
+<div><span>Uncertainty verdict</span><strong id="uncertaintyVerdict">—</strong></div>
+<div><span>Top-vs-second gap</span><strong id="uncertaintyGap">—</strong></div>
+<div><span>Best next measurement</span><strong id="voiAction">—</strong></div>
+<div><span>Information-value score</span><strong id="voiScore">—</strong></div>
+<div><span>L5 causal confirmation</span><strong id="l5Status">LOCKED</strong></div>
+</div>
+<div class="causal-warning" id="uncertaintyReason">Break the factory to evaluate whether KAIZEN should diagnose or explicitly say “I don't know yet.”</div>
+<div class="quality-grid">
+<article>
+<p class="eyebrow">VALUE OF INFORMATION / ACTIVE PROBE</p>
+<h3>What should we measure next?</h3>
+<p class="mini-note" id="voiDetail">No probe ranked yet.</p>
+<div class="simulation-controls compact-controls">
+<label>Probe
+              <select id="probeSelect"><option value="">Awaiting run</option></select>
+</label>
+<button class="primary" disabled="" id="runProbeBtn">RUN NEXT PROBE</button>
+</div>
+<div class="mini-note" id="probeResult">No additional observational probe executed.</div>
+<div class="mini-note" id="beliefUpdate"></div>
+</article>
+<article>
+<p class="eyebrow">HUMAN VS AI</p>
+<h3>Freeze your diagnosis before the answer is revealed</h3>
+<div class="simulation-controls compact-controls">
+<label>Your diagnosis
+              <select id="humanDiagnosis"><option value="">Awaiting run</option></select>
+</label>
+<button class="primary" disabled="" id="freezeHumanBtn">LOCK MY DIAGNOSIS</button>
+</div>
+<div class="mini-note" id="humanStatus">Choose one of the six competing hypotheses before reveal.</div>
+<div class="score-grade" hidden="" id="humanScore">—</div>
+</article>
+</div>
+<div class="quality-grid">
+<article>
+<p class="eyebrow">EXPERIMENT DESIGNER</p>
+<h3 id="experimentTitle">No DOE designed yet</h3>
+<p class="mini-note" id="experimentFactor"></p>
+<p class="mini-note" id="experimentLevels"></p>
+<p class="causal-warning" id="experimentRule">Design is observationally selected; execution requires explicit authorization.</p>
+<button class="danger" disabled="" id="executeExperimentBtn">AUTHORIZE + RUN SYNTHETIC DOE</button>
+</article>
+<article>
+<p class="eyebrow">BELIEF REVISION / CAUSAL GATE</p>
+<h3 id="experimentStatus">L5 remains locked</h3>
+<p class="mini-note" id="experimentMetrics">No controlled experiment executed.</p>
+<div class="mini-note" id="beliefRevision">If the authorized predeclared experiment later satisfies every confirmation criterion, the synthetic Level-5 gate may unlock. If it fails, KAIZEN must revise its belief instead of defending the old diagnosis.</div>
+</article>
+</div>
+<div class="mini-note" id="activePolicy"></div>
+</section><section class="panel control-panel workspace-section" data-workspace="validate" id="controlWorkspace">
+<div class="section-head"><div><p class="eyebrow">CONTROL / BENEFITS VERIFICATION</p><h2>How do we hold the gain — and know if it was real?</h2><p>KAIZEN predeclares monitoring, reaction and benefits-verification rules. It never marks savings realized until post-intervention observations exist.</p></div><span class="badge" id="controlState">Awaiting run</span></div>
+<div class="metric-grid quality-metrics"><div><span>Primary control metric</span><strong id="controlMetric">—</strong></div><div><span>Control method</span><strong id="controlChart">—</strong></div><div><span>Stabilization window</span><strong id="controlWindow">—</strong></div><div><span>Benefits verified</span><strong id="controlBenefits">NO</strong></div></div>
+<div class="quality-grid"><article><p class="eyebrow">REACTION PLAN</p><h2>What happens when control is lost?</h2><p id="controlReaction">No plan yet.</p><p class="mini-note" id="controlCadence"></p></article><article><p class="eyebrow">VERIFY BENEFITS</p><h2>Don't book modeled savings as actual savings</h2><p id="controlVerify">No verification policy yet.</p><p class="mini-note" id="controlReopen"></p></article></div>
+</section>
+<section class="panel ai-panel workspace-section" data-workspace="diagnose">
+<div class="section-head">
+<div>
+<p class="eyebrow">AI / GEMINI ENGINEERING COPILOT</p>
+<h2>Ask KAIZEN — and make the AI show its work</h2>
+<p>Gemini may explain and orchestrate validated engineering tools, but it cannot invent calculations or unlock causal confirmation.</p>
+</div>
+<span class="badge" id="aiState">Checking Gemini…</span>
+</div>
+<div class="metric-grid quality-metrics ai-metrics">
+<div><span>Provider</span><strong id="aiProvider">Google Gemini</strong></div>
+<div><span>Model</span><strong id="aiModel">—</strong></div>
+<div><span>Tool grounding</span><strong>REQUIRED</strong></div>
+<div><span>AI causal authority</span><strong>NONE</strong></div>
+</div>
+<div class="causal-warning" id="aiSetup">Set GEMINI_API_KEY in a local .env file or environment variable, then restart KAIZEN.</div>
+<div class="ai-controls">
+<textarea id="aiQuestion" placeholder="Ask: Why do you suspect M2? What evidence argues against it? Why not replace the fixture? What would you do with a $900 budget?" rows="4"></textarea>
+<div class="ai-buttons">
+<button class="primary" disabled="" id="askAiBtn">ASK KAIZEN</button>
+<button class="danger" disabled="" id="redTeamBtn">RED TEAM MY RECOMMENDATION</button>
+</div>
+</div>
+<div class="ai-answer" hidden="" id="aiAnswerCard">
+<div class="ai-answer-head">
+<div><span id="aiMode">ASK</span><h3 id="aiHeadline">—</h3></div>
+<span class="badge" id="aiCausalStatus">—</span>
+</div>
+<p class="ai-answer-text" id="aiAnswerText"></p>
+<div class="quality-grid ai-detail-grid">
+<article>
+<p class="eyebrow">EVIDENCE USED</p>
+<div class="tag-list" id="aiEvidence"></div>
+</article>
+<article>
+<p class="eyebrow">CONTRADICTORY EVIDENCE</p>
+<ul class="compact-list" id="aiContradictions"></ul>
+</article>
+</div>
+<div class="quality-grid ai-detail-grid">
+<article>
+<p class="eyebrow">ASSUMPTIONS</p>
+<ul class="compact-list" id="aiAssumptions"></ul>
+</article>
+<article>
+<p class="eyebrow">WHAT REMAINS UNKNOWN</p>
+<ul class="compact-list" id="aiUnknowns"></ul>
+</article>
+</div>
+<div>
+<p class="eyebrow">RECOMMENDED NEXT ACTIONS</p>
+<ul class="compact-list" id="aiNextActions"></ul>
+</div>
+<div class="ai-trace">
+<p class="eyebrow">FUNCTION-CALL TRACE</p>
+<div class="timeline" id="aiToolTrace"></div>
+</div>
+<div class="mini-note" id="aiConfidence"></div>
+</div>
+</section>
+<section class="quality-grid workspace-section" data-workspace="diagnose">
+<article class="panel">
+<p class="eyebrow">COMPETING HYPOTHESES</p>
+<h2>Who survives statistical challenge?</h2>
+<div class="table-wrap small-table">
+<table>
+<thead><tr><th>Rank</th><th>Hypothesis</th><th>Target</th><th>Score</th><th>Status</th><th>Primary p</th><th>Effect</th></tr></thead>
+<tbody id="hypothesisBody"><tr><td class="empty" colspan="7">No investigation yet.</td></tr></tbody>
+</table>
+</div>
+<div class="mini-note" id="hypothesisNote"></div>
+</article>
+<article class="panel">
+<p class="eyebrow">CORRELATION ≠ CAUSE GATE</p>
+<h2>How far can the evidence legitimately go?</h2>
+<div class="gate-list" id="causalGate"><p class="empty">No investigation yet.</p></div>
+<div class="mini-note" id="gatePolicy"></div>
+</article>
+</section>
+<section class="quality-grid workspace-section" data-workspace="diagnose">
+<article class="panel">
+<div class="section-head">
+<div>
+<p class="eyebrow">ADJUSTED REGRESSION</p>
+<h2>Does the signal survive obvious confounding?</h2>
+</div>
+<span class="badge" id="modelStatus">Awaiting run</span>
+</div>
+<div class="table-wrap small-table">
+<table>
+<thead><tr><th>Model</th><th>Term</th><th>Estimate</th><th>p-value</th><th>95% CI</th></tr></thead>
+<tbody id="regressionBody"><tr><td class="empty" colspan="5">No adjusted model yet.</td></tr></tbody>
+</table>
+</div>
+<div class="mini-note" id="regressionNote"></div>
+</article>
+<article class="panel">
+<p class="eyebrow">FACTORIAL ANOVA</p>
+<h2>Which factors and post-event interactions explain torque variation?</h2>
+<div class="table-wrap small-table">
+<table>
+<thead><tr><th>Term</th><th>F</th><th>p-value</th><th>df</th></tr></thead>
+<tbody id="anovaBody"><tr><td class="empty" colspan="4">No ANOVA yet.</td></tr></tbody>
+</table>
+</div>
+<div class="mini-note" id="anovaNote"></div>
+</article>
+</section>
+<section class="panel workspace-section" data-workspace="diagnose">
+<div class="section-head">
+<div>
+<p class="eyebrow">EVIDENCE LEDGER</p>
+<h2>Every claim leaves a statistical audit trail</h2>
+<p>Primary and corroborating tests are attached to explicit hypotheses. Evidence scores are ranking indices, not probabilities.</p>
+</div>
+<span class="badge" id="evidenceCount">0 tests</span>
+</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th>ID</th><th>Hypothesis</th><th>Role</th><th>Test</th><th>p-value</th><th>Effect</th><th>N</th><th>Detail</th></tr></thead>
+<tbody id="evidenceBody"><tr><td class="empty" colspan="8">No evidence yet.</td></tr></tbody>
+</table>
+</div>
+</section>
+<section class="panel workspace-section" data-workspace="diagnose">
+<div class="section-head">
+<div>
+<p class="eyebrow">CONFOUNDER CHECKS</p>
+<h2>Do operator, shift or product mix create a misleading story?</h2>
+<p>These checks are intentionally kept as competing explanations, not promoted to causes without a mechanism.</p>
+</div>
+<span class="badge">Observable data only</span>
+</div>
+<div class="table-wrap small-table">
+<table>
+<thead><tr><th>Factor</th><th>Level</th><th>Test</th><th>p-value</th><th>Effect</th><th>Interpretation</th></tr></thead>
+<tbody id="confounderBody"><tr><td class="empty" colspan="6">No checks yet.</td></tr></tbody>
+</table>
+</div>
+</section>
+<section class="panel data-panel workspace-section" data-workspace="data" id="dataWorkspace">
+<div class="section-head"><div><p class="eyebrow">DATA / INTEGRATION</p><h2>Demo, file, replay or live — one manufacturing contract</h2><p>Map plant data into the canonical observable schema. KAIZEN does not invent missing signals, and external data never receives synthetic ground truth.</p></div><span class="badge" id="dataContractState">CONTRACT V1</span></div>
+<div class="data-mode-grid">
+<article><b>DEMO</b><p>Deterministic Hidden Factory with sealed benchmark truth.</p></article>
+<article><b>FILE</b><p>Upload historical canonical/aliased CSV records.</p></article>
+<article><b>REPLAY</b><p>Use historical events in order for near-live demos.</p></article>
+<article><b>LIVE</b><p>Append events through the HTTP session API, then finalize.</p></article>
+</div>
+<form class="data-import" id="csvImportForm">
+<label>CSV file<input accept=".csv,text/csv" id="csvFile" type="file"/></label>
+<label>Boundary unit<input id="csvActivation" min="1" type="number" value="1050"/></label>
+<label>Line name<input id="csvLineName" type="text" value="External Manufacturing Line"/></label>
+<label>Mode<select id="csvMode"><option value="FILE">FILE</option><option value="REPLAY">REPLAY</option></select></label>
+<button class="primary" id="csvImportBtn" type="submit">IMPORT DATA</button>
+</form>
+<div class="causal-warning" id="dataImportResult">No external dataset loaded. Demo mode remains fully available.</div>
+<div class="export-actions">
+<button class="ghost-action" disabled="" id="exportCsvBtn">EXPORT CANONICAL CSV</button>
+<button class="ghost-action" disabled="" id="exportSnapshotBtn">EXPORT SNAPSHOT JSON</button>
+<button class="ghost-action" disabled="" id="openReportBtn">OPEN ENGINEERING REPORT</button>
+<button class="ghost-action" disabled="" id="replayBtn">REPLAY SAMPLE</button>
+</div>
+<div class="mini-note" id="replayStatus">Replay idle.</div>
+<details class="contract-details"><summary>Manufacturing data contract &amp; real-time boundary</summary><div id="contractText">Loading contract…</div></details>
+</section><section class="panel workspace-section" data-workspace="data">
+<div class="section-head">
+<div>
+<p class="eyebrow">PRODUCTION SAMPLE</p>
+<h2>Observable records</h2>
+</div>
+<span class="badge" id="recordCount">0 rows</span>
+</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Unit</th><th>Shift</th><th>Product</th><th>Machine</th><th>Fixture</th><th>Torque measured</th><th>Alignment measured</th><th>Queue s</th><th>Defect</th></tr></thead>
+<tbody id="recordsBody"><tr><td class="empty" colspan="9">No run yet.</td></tr></tbody>
+</table>
+</div>
+</section>
+<footer>V__KAIZEN_VERSION__ · Lean Six Sigma + IE + statistical investigation + counterfactual simulation + MILP decision optimization + active causal validation + tool-grounded Gemini. External data remains observational unless a real intervention is performed.</footer>
+</main></div></div>
+<script src="/static/app.js?build=__KAIZEN_BUILD_ID__"></script>
+</body>
+</html>

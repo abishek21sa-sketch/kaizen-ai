@@ -1,0 +1,955 @@
+{
+  "units_per_incident": 900,
+  "seeds": [
+    3,
+    7,
+    17,
+    42,
+    113,
+    2718
+  ],
+  "incident_count": 36,
+  "mechanism_family_correct": 36,
+  "mechanism_plus_target_correct": 36,
+  "full_attribution_correct": 36,
+  "full_attribution_rate": 1.0,
+  "scope_note": "Deterministic synthetic Hidden Factory benchmark only; not a real-factory accuracy estimate.",
+  "rows": [
+    {
+      "seed": 3,
+      "scenario": "tool_calibration_drift",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "MACHINE_TORQUE_BIAS",
+        "target": "M2",
+        "direction": "INCREASE",
+        "interaction_partner": null,
+        "evidence_score": 91.35,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "MACHINE_TORQUE_BIAS",
+        "target": "M2",
+        "direction": "INCREASE",
+        "interaction_partner": null
+      }
+    },
+    {
+      "seed": 3,
+      "scenario": "fixture_wear_temp",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "FIXTURE_ENVIRONMENT_INTERACTION",
+        "target": "F4",
+        "direction": "INCREASE",
+        "interaction_partner": "ambient_temp_c",
+        "evidence_score": 96.0,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "FIXTURE_ENVIRONMENT_INTERACTION",
+        "target": "F4",
+        "direction": "INCREASE",
+        "interaction_partner": "ambient_temp_c"
+      }
+    },
+    {
+      "seed": 3,
+      "scenario": "supplier_resin_shift",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "SUPPLIER_HUMIDITY_INTERACTION",
+        "target": "S2-L102",
+        "direction": "DECREASE",
+        "interaction_partner": "humidity_pct",
+        "evidence_score": 100.0,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "SUPPLIER_HUMIDITY_INTERACTION",
+        "target": "S2-*",
+        "direction": "DECREASE",
+        "interaction_partner": "humidity_pct"
+      }
+    },
+    {
+      "seed": 3,
+      "scenario": "gage_measurement_drift",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "GAGE_MEASUREMENT_DRIFT",
+        "target": "G2",
+        "direction": "INCREASE",
+        "interaction_partner": null,
+        "evidence_score": 92.52,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "GAGE_MEASUREMENT_DRIFT",
+        "target": "G2",
+        "direction": "INCREASE",
+        "interaction_partner": null
+      }
+    },
+    {
+      "seed": 3,
+      "scenario": "calibration_microstops",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "CALIBRATION_INTERMITTENT_LOSS",
+        "target": "Calibration",
+        "direction": "INCREASE",
+        "interaction_partner": null,
+        "evidence_score": 89.5,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "CALIBRATION_INTERMITTENT_LOSS",
+        "target": "Calibration",
+        "direction": "INCREASE",
+        "interaction_partner": null
+      }
+    },
+    {
+      "seed": 3,
+      "scenario": "changeover_deterioration",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "SEQUENCE_CHANGEOVER_LOSS",
+        "target": "Calibration product transitions",
+        "direction": "INCREASE",
+        "interaction_partner": "product_transition",
+        "evidence_score": 96.0,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "SEQUENCE_CHANGEOVER_LOSS",
+        "target": "Calibration product transitions",
+        "direction": "INCREASE",
+        "interaction_partner": "product_transition"
+      }
+    },
+    {
+      "seed": 7,
+      "scenario": "tool_calibration_drift",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "MACHINE_TORQUE_BIAS",
+        "target": "M2",
+        "direction": "INCREASE",
+        "interaction_partner": null,
+        "evidence_score": 93.14,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "MACHINE_TORQUE_BIAS",
+        "target": "M2",
+        "direction": "INCREASE",
+        "interaction_partner": null
+      }
+    },
+    {
+      "seed": 7,
+      "scenario": "fixture_wear_temp",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "FIXTURE_ENVIRONMENT_INTERACTION",
+        "target": "F4",
+        "direction": "INCREASE",
+        "interaction_partner": "ambient_temp_c",
+        "evidence_score": 96.0,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "FIXTURE_ENVIRONMENT_INTERACTION",
+        "target": "F4",
+        "direction": "INCREASE",
+        "interaction_partner": "ambient_temp_c"
+      }
+    },
+    {
+      "seed": 7,
+      "scenario": "supplier_resin_shift",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "SUPPLIER_HUMIDITY_INTERACTION",
+        "target": "S2-L102",
+        "direction": "DECREASE",
+        "interaction_partner": "humidity_pct",
+        "evidence_score": 100.0,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "SUPPLIER_HUMIDITY_INTERACTION",
+        "target": "S2-*",
+        "direction": "DECREASE",
+        "interaction_partner": "humidity_pct"
+      }
+    },
+    {
+      "seed": 7,
+      "scenario": "gage_measurement_drift",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "GAGE_MEASUREMENT_DRIFT",
+        "target": "G2",
+        "direction": "INCREASE",
+        "interaction_partner": null,
+        "evidence_score": 91.46,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "GAGE_MEASUREMENT_DRIFT",
+        "target": "G2",
+        "direction": "INCREASE",
+        "interaction_partner": null
+      }
+    },
+    {
+      "seed": 7,
+      "scenario": "calibration_microstops",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "CALIBRATION_INTERMITTENT_LOSS",
+        "target": "Calibration",
+        "direction": "INCREASE",
+        "interaction_partner": null,
+        "evidence_score": 82.7,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "CALIBRATION_INTERMITTENT_LOSS",
+        "target": "Calibration",
+        "direction": "INCREASE",
+        "interaction_partner": null
+      }
+    },
+    {
+      "seed": 7,
+      "scenario": "changeover_deterioration",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "SEQUENCE_CHANGEOVER_LOSS",
+        "target": "Calibration product transitions",
+        "direction": "INCREASE",
+        "interaction_partner": "product_transition",
+        "evidence_score": 96.0,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "SEQUENCE_CHANGEOVER_LOSS",
+        "target": "Calibration product transitions",
+        "direction": "INCREASE",
+        "interaction_partner": "product_transition"
+      }
+    },
+    {
+      "seed": 17,
+      "scenario": "tool_calibration_drift",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "MACHINE_TORQUE_BIAS",
+        "target": "M2",
+        "direction": "INCREASE",
+        "interaction_partner": null,
+        "evidence_score": 92.24,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "MACHINE_TORQUE_BIAS",
+        "target": "M2",
+        "direction": "INCREASE",
+        "interaction_partner": null
+      }
+    },
+    {
+      "seed": 17,
+      "scenario": "fixture_wear_temp",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "FIXTURE_ENVIRONMENT_INTERACTION",
+        "target": "F4",
+        "direction": "INCREASE",
+        "interaction_partner": "ambient_temp_c",
+        "evidence_score": 96.0,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "FIXTURE_ENVIRONMENT_INTERACTION",
+        "target": "F4",
+        "direction": "INCREASE",
+        "interaction_partner": "ambient_temp_c"
+      }
+    },
+    {
+      "seed": 17,
+      "scenario": "supplier_resin_shift",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "SUPPLIER_HUMIDITY_INTERACTION",
+        "target": "S2-L102",
+        "direction": "DECREASE",
+        "interaction_partner": "humidity_pct",
+        "evidence_score": 100.0,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "SUPPLIER_HUMIDITY_INTERACTION",
+        "target": "S2-*",
+        "direction": "DECREASE",
+        "interaction_partner": "humidity_pct"
+      }
+    },
+    {
+      "seed": 17,
+      "scenario": "gage_measurement_drift",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "GAGE_MEASUREMENT_DRIFT",
+        "target": "G2",
+        "direction": "INCREASE",
+        "interaction_partner": null,
+        "evidence_score": 91.23,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "GAGE_MEASUREMENT_DRIFT",
+        "target": "G2",
+        "direction": "INCREASE",
+        "interaction_partner": null
+      }
+    },
+    {
+      "seed": 17,
+      "scenario": "calibration_microstops",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "CALIBRATION_INTERMITTENT_LOSS",
+        "target": "Calibration",
+        "direction": "INCREASE",
+        "interaction_partner": null,
+        "evidence_score": 89.95,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "CALIBRATION_INTERMITTENT_LOSS",
+        "target": "Calibration",
+        "direction": "INCREASE",
+        "interaction_partner": null
+      }
+    },
+    {
+      "seed": 17,
+      "scenario": "changeover_deterioration",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "SEQUENCE_CHANGEOVER_LOSS",
+        "target": "Calibration product transitions",
+        "direction": "INCREASE",
+        "interaction_partner": "product_transition",
+        "evidence_score": 96.0,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "SEQUENCE_CHANGEOVER_LOSS",
+        "target": "Calibration product transitions",
+        "direction": "INCREASE",
+        "interaction_partner": "product_transition"
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "tool_calibration_drift",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "MACHINE_TORQUE_BIAS",
+        "target": "M2",
+        "direction": "INCREASE",
+        "interaction_partner": null,
+        "evidence_score": 92.54,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "MACHINE_TORQUE_BIAS",
+        "target": "M2",
+        "direction": "INCREASE",
+        "interaction_partner": null
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "fixture_wear_temp",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "FIXTURE_ENVIRONMENT_INTERACTION",
+        "target": "F4",
+        "direction": "INCREASE",
+        "interaction_partner": "ambient_temp_c",
+        "evidence_score": 96.0,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "FIXTURE_ENVIRONMENT_INTERACTION",
+        "target": "F4",
+        "direction": "INCREASE",
+        "interaction_partner": "ambient_temp_c"
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "supplier_resin_shift",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "SUPPLIER_HUMIDITY_INTERACTION",
+        "target": "S2-L102",
+        "direction": "DECREASE",
+        "interaction_partner": "humidity_pct",
+        "evidence_score": 100.0,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "SUPPLIER_HUMIDITY_INTERACTION",
+        "target": "S2-*",
+        "direction": "DECREASE",
+        "interaction_partner": "humidity_pct"
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "gage_measurement_drift",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "GAGE_MEASUREMENT_DRIFT",
+        "target": "G2",
+        "direction": "INCREASE",
+        "interaction_partner": null,
+        "evidence_score": 90.83,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "GAGE_MEASUREMENT_DRIFT",
+        "target": "G2",
+        "direction": "INCREASE",
+        "interaction_partner": null
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "calibration_microstops",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "CALIBRATION_INTERMITTENT_LOSS",
+        "target": "Calibration",
+        "direction": "INCREASE",
+        "interaction_partner": null,
+        "evidence_score": 96.0,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "CALIBRATION_INTERMITTENT_LOSS",
+        "target": "Calibration",
+        "direction": "INCREASE",
+        "interaction_partner": null
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "changeover_deterioration",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "SEQUENCE_CHANGEOVER_LOSS",
+        "target": "Calibration product transitions",
+        "direction": "INCREASE",
+        "interaction_partner": "product_transition",
+        "evidence_score": 96.0,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "SEQUENCE_CHANGEOVER_LOSS",
+        "target": "Calibration product transitions",
+        "direction": "INCREASE",
+        "interaction_partner": "product_transition"
+      }
+    },
+    {
+      "seed": 113,
+      "scenario": "tool_calibration_drift",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "MACHINE_TORQUE_BIAS",
+        "target": "M2",
+        "direction": "INCREASE",
+        "interaction_partner": null,
+        "evidence_score": 92.55,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "MACHINE_TORQUE_BIAS",
+        "target": "M2",
+        "direction": "INCREASE",
+        "interaction_partner": null
+      }
+    },
+    {
+      "seed": 113,
+      "scenario": "fixture_wear_temp",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "FIXTURE_ENVIRONMENT_INTERACTION",
+        "target": "F4",
+        "direction": "INCREASE",
+        "interaction_partner": "ambient_temp_c",
+        "evidence_score": 96.0,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "FIXTURE_ENVIRONMENT_INTERACTION",
+        "target": "F4",
+        "direction": "INCREASE",
+        "interaction_partner": "ambient_temp_c"
+      }
+    },
+    {
+      "seed": 113,
+      "scenario": "supplier_resin_shift",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "SUPPLIER_HUMIDITY_INTERACTION",
+        "target": "S2-L102",
+        "direction": "DECREASE",
+        "interaction_partner": "humidity_pct",
+        "evidence_score": 100.0,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "SUPPLIER_HUMIDITY_INTERACTION",
+        "target": "S2-*",
+        "direction": "DECREASE",
+        "interaction_partner": "humidity_pct"
+      }
+    },
+    {
+      "seed": 113,
+      "scenario": "gage_measurement_drift",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "GAGE_MEASUREMENT_DRIFT",
+        "target": "G2",
+        "direction": "INCREASE",
+        "interaction_partner": null,
+        "evidence_score": 91.94,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "GAGE_MEASUREMENT_DRIFT",
+        "target": "G2",
+        "direction": "INCREASE",
+        "interaction_partner": null
+      }
+    },
+    {
+      "seed": 113,
+      "scenario": "calibration_microstops",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "CALIBRATION_INTERMITTENT_LOSS",
+        "target": "Calibration",
+        "direction": "INCREASE",
+        "interaction_partner": null,
+        "evidence_score": 91.76,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "CALIBRATION_INTERMITTENT_LOSS",
+        "target": "Calibration",
+        "direction": "INCREASE",
+        "interaction_partner": null
+      }
+    },
+    {
+      "seed": 113,
+      "scenario": "changeover_deterioration",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "SEQUENCE_CHANGEOVER_LOSS",
+        "target": "Calibration product transitions",
+        "direction": "INCREASE",
+        "interaction_partner": "product_transition",
+        "evidence_score": 96.0,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "SEQUENCE_CHANGEOVER_LOSS",
+        "target": "Calibration product transitions",
+        "direction": "INCREASE",
+        "interaction_partner": "product_transition"
+      }
+    },
+    {
+      "seed": 2718,
+      "scenario": "tool_calibration_drift",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "MACHINE_TORQUE_BIAS",
+        "target": "M2",
+        "direction": "INCREASE",
+        "interaction_partner": null,
+        "evidence_score": 91.49,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "MACHINE_TORQUE_BIAS",
+        "target": "M2",
+        "direction": "INCREASE",
+        "interaction_partner": null
+      }
+    },
+    {
+      "seed": 2718,
+      "scenario": "fixture_wear_temp",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "FIXTURE_ENVIRONMENT_INTERACTION",
+        "target": "F4",
+        "direction": "INCREASE",
+        "interaction_partner": "ambient_temp_c",
+        "evidence_score": 96.0,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "FIXTURE_ENVIRONMENT_INTERACTION",
+        "target": "F4",
+        "direction": "INCREASE",
+        "interaction_partner": "ambient_temp_c"
+      }
+    },
+    {
+      "seed": 2718,
+      "scenario": "supplier_resin_shift",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "SUPPLIER_HUMIDITY_INTERACTION",
+        "target": "S2-L102",
+        "direction": "DECREASE",
+        "interaction_partner": "humidity_pct",
+        "evidence_score": 100.0,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "SUPPLIER_HUMIDITY_INTERACTION",
+        "target": "S2-*",
+        "direction": "DECREASE",
+        "interaction_partner": "humidity_pct"
+      }
+    },
+    {
+      "seed": 2718,
+      "scenario": "gage_measurement_drift",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "GAGE_MEASUREMENT_DRIFT",
+        "target": "G2",
+        "direction": "INCREASE",
+        "interaction_partner": null,
+        "evidence_score": 92.97,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "GAGE_MEASUREMENT_DRIFT",
+        "target": "G2",
+        "direction": "INCREASE",
+        "interaction_partner": null
+      }
+    },
+    {
+      "seed": 2718,
+      "scenario": "calibration_microstops",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "CALIBRATION_INTERMITTENT_LOSS",
+        "target": "Calibration",
+        "direction": "INCREASE",
+        "interaction_partner": null,
+        "evidence_score": 87.23,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "CALIBRATION_INTERMITTENT_LOSS",
+        "target": "Calibration",
+        "direction": "INCREASE",
+        "interaction_partner": null
+      }
+    },
+    {
+      "seed": 2718,
+      "scenario": "changeover_deterioration",
+      "score": 100.0,
+      "grade": "FULL_ATTRIBUTION_MATCH",
+      "checks": {
+        "mechanism_family": true,
+        "affected_target": true,
+        "direction": true,
+        "interaction_partner": true
+      },
+      "prediction": {
+        "code": "SEQUENCE_CHANGEOVER_LOSS",
+        "target": "Calibration product transitions",
+        "direction": "INCREASE",
+        "interaction_partner": "product_transition",
+        "evidence_score": 96.0,
+        "status": "STRONG_SUSPECT"
+      },
+      "expected": {
+        "code": "SEQUENCE_CHANGEOVER_LOSS",
+        "target": "Calibration product transitions",
+        "direction": "INCREASE",
+        "interaction_partner": "product_transition"
+      }
+    }
+  ]
+}

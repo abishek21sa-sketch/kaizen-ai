@@ -1,0 +1,189 @@
+{
+  "benchmark": "V0.7 synthetic constrained-optimizer benchmark",
+  "incidents": 18,
+  "expected_action_in_optimal_portfolio": 18,
+  "hard_constraints_satisfied": 18,
+  "note": "Synthetic Hidden Factory benchmark only; not a real-plant financial or causal-effectiveness claim.",
+  "cases": [
+    {
+      "scenario": "tool_calibration_drift",
+      "seed": 7,
+      "expected": "TOOL_RECALIBRATION",
+      "selected": [
+        "TOOL_RECALIBRATION"
+      ],
+      "match": true,
+      "constraints_ok": true
+    },
+    {
+      "scenario": "tool_calibration_drift",
+      "seed": 42,
+      "expected": "TOOL_RECALIBRATION",
+      "selected": [
+        "TOOL_RECALIBRATION"
+      ],
+      "match": true,
+      "constraints_ok": true
+    },
+    {
+      "scenario": "tool_calibration_drift",
+      "seed": 88,
+      "expected": "TOOL_RECALIBRATION",
+      "selected": [
+        "TOOL_RECALIBRATION"
+      ],
+      "match": true,
+      "constraints_ok": true
+    },
+    {
+      "scenario": "gage_measurement_drift",
+      "seed": 7,
+      "expected": "GAGE_RECALIBRATION",
+      "selected": [
+        "GAGE_RECALIBRATION"
+      ],
+      "match": true,
+      "constraints_ok": true
+    },
+    {
+      "scenario": "gage_measurement_drift",
+      "seed": 42,
+      "expected": "GAGE_RECALIBRATION",
+      "selected": [
+        "GAGE_RECALIBRATION"
+      ],
+      "match": true,
+      "constraints_ok": true
+    },
+    {
+      "scenario": "gage_measurement_drift",
+      "seed": 88,
+      "expected": "GAGE_RECALIBRATION",
+      "selected": [
+        "GAGE_RECALIBRATION"
+      ],
+      "match": true,
+      "constraints_ok": true
+    },
+    {
+      "scenario": "fixture_wear_temp",
+      "seed": 7,
+      "expected": "FIXTURE_REPLACEMENT_THERMAL",
+      "selected": [
+        "FIXTURE_REPLACEMENT_THERMAL"
+      ],
+      "match": true,
+      "constraints_ok": true
+    },
+    {
+      "scenario": "fixture_wear_temp",
+      "seed": 42,
+      "expected": "FIXTURE_REPLACEMENT_THERMAL",
+      "selected": [
+        "FIXTURE_REPLACEMENT_THERMAL"
+      ],
+      "match": true,
+      "constraints_ok": true
+    },
+    {
+      "scenario": "fixture_wear_temp",
+      "seed": 88,
+      "expected": "FIXTURE_REPLACEMENT_THERMAL",
+      "selected": [
+        "FIXTURE_REPLACEMENT_THERMAL"
+      ],
+      "match": true,
+      "constraints_ok": true
+    },
+    {
+      "scenario": "supplier_resin_shift",
+      "seed": 7,
+      "expected": "SUPPLIER_CONTAINMENT",
+      "selected": [
+        "SUPPLIER_CONTAINMENT"
+      ],
+      "match": true,
+      "constraints_ok": true
+    },
+    {
+      "scenario": "supplier_resin_shift",
+      "seed": 42,
+      "expected": "SUPPLIER_CONTAINMENT",
+      "selected": [
+        "SUPPLIER_CONTAINMENT"
+      ],
+      "match": true,
+      "constraints_ok": true
+    },
+    {
+      "scenario": "supplier_resin_shift",
+      "seed": 88,
+      "expected": "SUPPLIER_CONTAINMENT",
+      "selected": [
+        "SUPPLIER_CONTAINMENT"
+      ],
+      "match": true,
+      "constraints_ok": true
+    },
+    {
+      "scenario": "calibration_microstops",
+      "seed": 7,
+      "expected": "CALIBRATION_SENSOR_SERVICE",
+      "selected": [
+        "CALIBRATION_SENSOR_SERVICE"
+      ],
+      "match": true,
+      "constraints_ok": true
+    },
+    {
+      "scenario": "calibration_microstops",
+      "seed": 42,
+      "expected": "CALIBRATION_SENSOR_SERVICE",
+      "selected": [
+        "CALIBRATION_SENSOR_SERVICE"
+      ],
+      "match": true,
+      "constraints_ok": true
+    },
+    {
+      "scenario": "calibration_microstops",
+      "seed": 88,
+      "expected": "CALIBRATION_SENSOR_SERVICE",
+      "selected": [
+        "CALIBRATION_SENSOR_SERVICE"
+      ],
+      "match": true,
+      "constraints_ok": true
+    },
+    {
+      "scenario": "changeover_deterioration",
+      "seed": 7,
+      "expected": "CHANGEOVER_STANDARD_WORK",
+      "selected": [
+        "CHANGEOVER_STANDARD_WORK"
+      ],
+      "match": true,
+      "constraints_ok": true
+    },
+    {
+      "scenario": "changeover_deterioration",
+      "seed": 42,
+      "expected": "CHANGEOVER_STANDARD_WORK",
+      "selected": [
+        "CHANGEOVER_STANDARD_WORK"
+      ],
+      "match": true,
+      "constraints_ok": true
+    },
+    {
+      "scenario": "changeover_deterioration",
+      "seed": 88,
+      "expected": "CHANGEOVER_STANDARD_WORK",
+      "selected": [
+        "CHANGEOVER_STANDARD_WORK"
+      ],
+      "match": true,
+      "constraints_ok": true
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+VERSION = "1.0.0"
+BUILD_ID = "20260815-v100-public1"

@@ -1,0 +1,32 @@
+{
+  "version": "0.8.7",
+  "build_id": "20260815-v087-semantic1",
+  "automated_tests": 101,
+  "diagnostics": {
+    "passed": 19,
+    "total": 19
+  },
+  "gemini_sdk": "google-genai==2.18.1",
+  "gemini_api": "Interactions API",
+  "default_model": "gemini-3.5-flash-lite",
+  "automated_live_external_request": false,
+  "reason_live_external_request_not_run": "Release environment has no user Gemini API key; live Google request remains a laptop acceptance gate.",
+  "contract_validation": {
+    "task_aware_first_tool_routing": true,
+    "forced_tool_grounding": true,
+    "bounded_orchestration": true,
+    "duplicate_tool_cache": true,
+    "structured_response_schema": true,
+    "optimizer_semantic_authority": true,
+    "evidence_ledger_backfill": true,
+    "red_team_limitation_backfill": true,
+    "runtime_entity_reference_grounding": true,
+    "runtime_entity_misfile_normalization": true,
+    "invented_runtime_asset_rejected": true,
+    "fabricated_evidence_id_rejected": true,
+    "quota_model_fallback": true,
+    "ground_truth_tool_exposed": false,
+    "truth_dependency": false,
+    "causal_confirmation_unlocked": false
+  }
+}
