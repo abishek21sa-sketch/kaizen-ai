@@ -7,9 +7,11 @@ import csv
 import io
 import uuid
 import time
+import os
 
 
 from fastapi import FastAPI, HTTPException, Query, UploadFile, File, Form
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse, JSONResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 
@@ -63,6 +65,17 @@ app = FastAPI(
     ),
 )
 app.mount("/static", StaticFiles(directory=str(STATIC)), name="static")
+
+_cors_origins_raw = os.getenv(
+    "KAIZEN_CORS_ORIGINS",
+    "http://localhost:9550,http://127.0.0.1:9550",
+)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[origin.strip() for origin in _cors_origins_raw.split(",") if origin.strip()],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.middleware("http")

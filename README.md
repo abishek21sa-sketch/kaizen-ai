@@ -225,6 +225,24 @@ All benchmark accuracy/confirmation counts are for the deterministic synthetic H
 
 ## Windows quick start
 
+## Production deployment
+
+KAIZEN is deployed as two independent services: the static control-room UI on
+Vercel and the FastAPI engine on Render. The root `vercel.json` publishes the
+`static/` directory; `render.yaml` starts the API on Render's assigned `$PORT`
+and exposes `/health` for platform checks.
+
+1. Create the Render Blueprint from this repository and set `KAIZEN_CORS_ORIGINS`
+   to the final Vercel URL.
+2. Create the Vercel project from the same repository. Vercel uses `static/` as
+   its output directory and the UI defaults to
+   `https://kaizen-ai-api.onrender.com` outside local development.
+3. Set `GEMINI_API_KEY` only in Render if AI answers are required; never put it
+   in the Vercel project.
+
+The frontend and backend can be smoke-tested independently at `/` and `/health`
+before connecting the two domains.
+
 1. Extract the ZIP into a fresh writable folder.
 2. Close older KAIZEN terminals.
 3. Optional Gemini: copy `.env.example` to `.env`, add your local API key, and never commit/share it.

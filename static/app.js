@@ -5,6 +5,8 @@ let currentWorkspace = 'mission';
 let publicEvidenceLoaded = false;
 
 const $ = (id) => document.getElementById(id);
+const API_BASE = String(window.KAIZEN_API_BASE || '').replace(/\/$/, '');
+const apiUrl = (path) => `${API_BASE}${path}`;
 const pct = (x) => `${(Number(x) * 100).toFixed(2)}%`;
 const sec = (x) => `${Number(x).toFixed(1)} s`;
 const money = (x) => `$${Number(x).toLocaleString(undefined,{maximumFractionDigits:0})}`;
@@ -32,7 +34,7 @@ function formatApiError(detail, status) {
 }
 
 async function json(url, opts={}) {
-  const res = await fetch(url, opts);
+  const res = await fetch(apiUrl(url), opts);
   const body = await res.json().catch(() => ({}));
   if (!res.ok) throw new Error(formatApiError(body.detail, res.status));
   return body;
@@ -889,7 +891,7 @@ async function importCsv(event) {
   fd.append('mapping_json','{}');
   $('csvImportBtn').disabled=true; $('csvImportBtn').textContent='MAPPING…';
   try {
-    const res=await fetch('/api/data/import/csv',{method:'POST',body:fd});
+    const res=await fetch(apiUrl('/api/data/import/csv'),{method:'POST',body:fd});
     const body=await res.json().catch(()=>({}));
     if (!res.ok) throw new Error(formatApiError(body.detail,res.status));
     currentRun=body.run_id; currentSourceMode=body.source_mode;
