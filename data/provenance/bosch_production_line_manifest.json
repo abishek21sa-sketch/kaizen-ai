@@ -1,0 +1,23 @@
+{
+  "name": "Bosch Production Line Performance",
+  "host": "Bosch / Kaggle",
+  "purpose": "Predict internal manufacturing failures from measurements collected as parts move through Bosch production lines.",
+  "files": [
+    "train_numeric.csv",
+    "test_numeric.csv",
+    "train_categorical.csv",
+    "test_categorical.csv",
+    "train_date.csv",
+    "test_date.csv",
+    "sample_submission.csv"
+  ],
+  "reported_archive_size_mb": 729.35,
+  "reported_training_rows": 1183747,
+  "reported_positive_failures": 6879,
+  "reported_negative_rows": 1176868,
+  "restriction": "Raw files are subject to Kaggle competition rules. Do not redistribute them in the portfolio ZIP unless the rules permit it. Prefer a downloader/instructions and derived non-sensitive aggregates/evidence.",
+  "project_targets": [
+    "KAIZEN AI",
+    "Manufacturing Quality Intelligence"
+  ]
+}

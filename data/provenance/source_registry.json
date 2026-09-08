@@ -1,0 +1,13 @@
+[
+  {
+    "project": "KAIZEN AI",
+    "company_context": "Bosch + industrial condition monitoring",
+    "primary_dataset": "UCI Condition Monitoring of Hydraulic Systems",
+    "dataset_id": 447,
+    "instances": 2205,
+    "features": "multi-sensor time-series",
+    "license": "CC BY 4.0",
+    "secondary_company_dataset": "Bosch Production Line Performance (Kaggle; competition rules apply)",
+    "intended_use": "Fault-state diagnosis, change detection, intervention prioritization, TRACE-LIFT evidence selection and CAPE experiment design."
+  }
+]

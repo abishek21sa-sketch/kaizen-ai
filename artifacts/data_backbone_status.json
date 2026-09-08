@@ -1,0 +1,118 @@
+{
+  "autonomous_execution": false,
+  "case_study": {
+    "algorithm": "TRACE-LIFT-v1",
+    "condition_levels": [
+      "100",
+      "20",
+      "3"
+    ],
+    "decision_impact": "Observed condition-state separation determines the diagnostic probe priority sent to CAPE experiment allocation.",
+    "name": "Hydraulic Degradation Investigation and Evidence Triage",
+    "rows": 2204,
+    "status": "ACTIVE",
+    "target": "3",
+    "trace_lift_probe_queue": [
+      {
+        "burden": 0.12,
+        "probe": "33.594",
+        "reliability": 1.0,
+        "standardized_condition_shift": 2.3954368868521514,
+        "trace_lift_score": 1.6734549171189834
+      },
+      {
+        "burden": 0.16999999999999998,
+        "probe": "31.74525",
+        "reliability": 0.9259259259259258,
+        "standardized_condition_shift": 2.394638549770757,
+        "trace_lift_score": 1.5569476199574255
+      },
+      {
+        "burden": 0.22,
+        "probe": "30.363",
+        "reliability": 0.8620689655172414,
+        "standardized_condition_shift": 2.3934442354999748,
+        "trace_lift_score": 1.4516661025564268
+      },
+      {
+        "burden": 0.27,
+        "probe": "9.568",
+        "reliability": 0.8064516129032259,
+        "standardized_condition_shift": 2.3919045444336877,
+        "trace_lift_score": 1.3554364901274982
+      },
+      {
+        "burden": 0.32,
+        "probe": "9.681",
+        "reliability": 0.7575757575757576,
+        "standardized_condition_shift": 2.3916000238292794,
+        "trace_lift_score": 1.2666629997204624
+      },
+      {
+        "burden": 0.37,
+        "probe": "9.7280975",
+        "reliability": 0.7142857142857143,
+        "standardized_condition_shift": 2.3914859924459053,
+        "trace_lift_score": 1.1840401841025447
+      },
+      {
+        "burden": 0.42000000000000004,
+        "probe": "9.8421695",
+        "reliability": 0.6756756756756757,
+        "standardized_condition_shift": 2.3911720205237152,
+        "trace_lift_score": 1.1065587533050212
+      },
+      {
+        "burden": 0.47000000000000003,
+        "probe": "9.887",
+        "reliability": 0.641025641025641,
+        "standardized_condition_shift": 2.390487862138807,
+        "trace_lift_score": 1.0334210095310339
+      }
+    ]
+  },
+  "claim_boundary": "UCI hydraulic data is public experimental condition-monitoring evidence. Bosch competition raw data is not redistributed.",
+  "current_model_version": "public-data-backbone-1.0",
+  "dataset": "UCI Condition Monitoring of Hydraulic Systems",
+  "dataset_state": "REFRESHED_EXTERNAL_ACTIVE",
+  "generated_at_utc": "2026-09-07T04:26:18.326498+00:00",
+  "human_authority": "CONTINUOUS_IMPROVEMENT_ENGINEER",
+  "layers": {
+    "contracts": "data/contracts",
+    "dictionaries": "data/dictionaries",
+    "processed": "data/processed",
+    "provenance": "data/provenance",
+    "raw": "data/raw",
+    "snapshots": "data/snapshots"
+  },
+  "primary_files": [
+    {
+      "bytes": 1771554,
+      "features": 68,
+      "missing_fraction": 0.0,
+      "path": "data\\raw\\uci_hydraulic\\features.csv",
+      "rows": 2204,
+      "sha256": "550d84dfba0072d11fb9ac2782286de97ff840f9d1fa629a10ed979325b0082a"
+    },
+    {
+      "bytes": 33401,
+      "features": 5,
+      "missing_fraction": 0.0,
+      "path": "data\\raw\\uci_hydraulic\\targets.csv",
+      "rows": 2204,
+      "sha256": "2d9b9e0ef17d1631b588d5f5a69cadafc2a940d0594c1aa13026047dfe0b7887"
+    }
+  ],
+  "project": "KAIZEN AI",
+  "schema_validation": "PASS",
+  "static_context_files": [
+    {
+      "bytes": 863,
+      "features": 10,
+      "missing_fraction": null,
+      "path": "data\\provenance\\bosch_production_line_manifest.json",
+      "rows": 1,
+      "sha256": "c715102bb7c7af85d5f6883e4d9697facdd6841fdd7058df2fbd5fdb11ee2982"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "project": "KAIZEN AI",
+  "visual_identity": "continuous-improvement A3 war room / evidence board",
+  "native_entrypoint": "static/index.html",
+  "shared_behavioral_contract": [
+    "input",
+    "evidence",
+    "decision",
+    "counterfactual",
+    "human approval"
+  ],
+  "project_specific_flow": [
+    "break or import a factory case",
+    "measure SPC and flow",
+    "diagnose hypotheses",
+    "allocate experiments with CAPE-Loop",
+    "approve the control plan"
+  ],
+  "not_shared": [
+    "theme",
+    "layout",
+    "domain vocabulary",
+    "visualization type"
+  ],
+  "signature_endpoint": "/api/governance/signature"
+}

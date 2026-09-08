@@ -1,0 +1,18 @@
+{
+  "cape_information_priority": 245.673,
+  "certificate_sha256": "591f0f78c0e83669df037c73258c09356e20deb317df0762a10cfa0ecf323a3d",
+  "checks": {
+    "cape_optimal": true,
+    "causal_firewall_locked": true,
+    "certificate_valid": true,
+    "invalid_resource_envelope_rejected": true,
+    "joint_allocation_not_worse_than_greedy": true,
+    "reference_runtime_under_30s": true,
+    "tampering_detected": true
+  },
+  "claim_boundary": "Synthetic/observable manufacturing evidence; CAPE allocates experiments and never authorizes causal or production claims.",
+  "greedy_information_priority": 219.02,
+  "phase": "ENTERPRISE_OPERABILITY_V1",
+  "runtime_seconds": 0.7356825199999548,
+  "status": "PASS"
+}

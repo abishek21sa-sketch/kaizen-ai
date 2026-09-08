@@ -1,0 +1,25 @@
+{
+  "ptype": "kaizen",
+  "title": "KAIZEN AI",
+  "dataset": "UCI Condition Monitoring of Hydraulic Systems",
+  "uci_id": 447,
+  "raw_dir": "uci_hydraulic",
+  "primary_files": [
+    "features.csv",
+    "targets.csv"
+  ],
+  "static": [
+    [
+      "source_manifests/bosch_production_line.json",
+      "data/provenance/bosch_production_line_manifest.json"
+    ]
+  ],
+  "algorithm": "TRACE-LIFT-v1",
+  "case": "Hydraulic Degradation Investigation and Evidence Triage",
+  "authority": "CONTINUOUS_IMPROVEMENT_ENGINEER",
+  "claim": "UCI hydraulic data is public experimental condition-monitoring evidence. Bosch competition raw data is not redistributed.",
+  "static_files": [
+    "data/provenance/bosch_production_line_manifest.json"
+  ],
+  "model_version": "public-data-backbone-1.0"
+}

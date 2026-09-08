@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "project": "KAIZEN AI",
+  "model_family": "LinUCB contextual-bandit learning",
+  "registry_state": "BANDIT_ACTIVE",
+  "agent": "Continuous Improvement Investigator",
+  "decision_state": "INVESTIGATE",
+  "runtime_ms": 399286.88,
+  "checks": {
+    "unique_model_family": true,
+    "validation_metric": true,
+    "monitoring_depth": true,
+    "retraining_policy": true,
+    "registry_state": true,
+    "agent_branches_on_model_state": true,
+    "prediction_used": true,
+    "decision_used": true,
+    "counterfactual_challenge": true,
+    "operator_aid": true,
+    "human_authority": true,
+    "original_algorithm_preserved": true,
+    "ml_endpoint": true,
+    "agent_endpoint": true
+  }
+}

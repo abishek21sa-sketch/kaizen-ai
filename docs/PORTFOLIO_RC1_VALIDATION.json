@@ -1,0 +1,206 @@
+{
+  "cape": {
+    "allocation": [
+      {
+        "allocated_cost_usd": 440.0,
+        "allocated_downtime_hours": 1.4,
+        "hypothesis_code": "SUPPLIER_HUMIDITY_INTERACTION",
+        "information_priority_value": 127.949,
+        "label": "Lot \u00d7 humidity stratification",
+        "observational_evidence_score": 15.66,
+        "probe_code": "LOT_HUMIDITY_STRATIFICATION",
+        "replicates": 2
+      },
+      {
+        "allocated_cost_usd": 240.0,
+        "allocated_downtime_hours": 0.8,
+        "hypothesis_code": "GAGE_MEASUREMENT_DRIFT",
+        "information_priority_value": 117.724,
+        "label": "Cross-gage repeat check",
+        "observational_evidence_score": 92.67,
+        "probe_code": "CROSS_GAGE_REPEAT_CHECK",
+        "replicates": 2
+      }
+    ],
+    "causal_firewall": {
+      "causal_confirmation_unlocked": false,
+      "observational_allocation_authority": "PRIORITIZE_EXPERIMENTS_ONLY",
+      "unlock_requirement": "Only an authorized controlled experiment that passes its predeclared statistical/effect-size rule may unlock synthetic causal confirmation."
+    },
+    "evidence_boundary": "CAPE scores are decision-priority indices, not probabilities of causality or realized economic benefit.",
+    "method": "CAPE-Loop binary one-hot MILP with diminishing information returns",
+    "objective_information_priority": 245.673,
+    "resource_limits": {
+      "budget_usd": 900,
+      "max_downtime_hours": 2.5,
+      "max_experiment_runs": 4,
+      "max_replicates_per_hypothesis": 2
+    },
+    "resource_use": {
+      "budget_usd": 680.0,
+      "downtime_hours": 2.2,
+      "runs": 4
+    },
+    "status": "OPTIMAL"
+  },
+  "cape_ablation": {
+    "information_priority_gain_vs_greedy": 26.65299999999999,
+    "rank_greedy": {
+      "allocation": [
+        {
+          "allocated_cost_usd": 120.0,
+          "allocated_downtime_hours": 0.4,
+          "hypothesis_code": "GAGE_MEASUREMENT_DRIFT",
+          "information_priority_value": 73.3,
+          "probe_code": "CROSS_GAGE_REPEAT_CHECK",
+          "replicates": 1
+        },
+        {
+          "allocated_cost_usd": 220.0,
+          "allocated_downtime_hours": 0.7,
+          "hypothesis_code": "SUPPLIER_HUMIDITY_INTERACTION",
+          "information_priority_value": 79.666,
+          "probe_code": "LOT_HUMIDITY_STRATIFICATION",
+          "replicates": 1
+        },
+        {
+          "allocated_cost_usd": 240.0,
+          "allocated_downtime_hours": 0.8,
+          "hypothesis_code": "FIXTURE_ENVIRONMENT_INTERACTION",
+          "information_priority_value": 36.17,
+          "probe_code": "FIXTURE_THERMAL_STRATIFICATION",
+          "replicates": 1
+        },
+        {
+          "allocated_cost_usd": 90.0,
+          "allocated_downtime_hours": 0.6,
+          "hypothesis_code": "SEQUENCE_CHANGEOVER_LOSS",
+          "information_priority_value": 29.884,
+          "probe_code": "MATCHED_CHANGEOVER_TIME_STUDY",
+          "replicates": 1
+        }
+      ],
+      "causal_confirmation_unlocked": false,
+      "method": "rank-greedy one-replicate baseline",
+      "objective_information_priority": 219.02,
+      "resource_use": {
+        "budget_usd": 670.0,
+        "downtime_hours": 2.5,
+        "runs": 4
+      },
+      "status": "FEASIBLE_BASELINE"
+    }
+  },
+  "evidence_boundary": "Synthetic Hidden Factory benchmark; no real-factory causal or financial-performance claim.",
+  "governance": {
+    "causal_confirmation_unlocked": false,
+    "human_authorization_required": true,
+    "production_write_allowed": false
+  },
+  "intervention_optimizer": {
+    "best_portfolio": {
+      "baseline": {
+        "average_wip_units": 4.642669,
+        "calibration_service_rate_units_per_hour": 104.3411,
+        "copq_per_1000_units_usd": 7635.47,
+        "copq_total_usd": 3100.0,
+        "defect_rate": 0.093596,
+        "first_pass_yield": 0.906404,
+        "good_throughput_units_per_hour": 76.9881,
+        "little_law_error_pct": 0.0,
+        "max_wip_units": 6,
+        "mean_lead_time_s": 196.7744,
+        "mean_queue_wait_s": 0.4052,
+        "n": 406,
+        "p95_queue_wait_s": 2.9874,
+        "throughput_units_per_hour": 84.9379,
+        "torque_cpk": 0.4492
+      },
+      "causal_guardrail": "Portfolio replay is conditional decision support. It does not convert observational diagnosis into causal confirmation or DOE evidence.",
+      "counterfactual": {
+        "average_wip_units": 4.642669,
+        "calibration_service_rate_units_per_hour": 104.3411,
+        "copq_per_1000_units_usd": 113.3,
+        "copq_total_usd": 46.0,
+        "defect_rate": 0.002463,
+        "first_pass_yield": 0.997537,
+        "good_throughput_units_per_hour": 84.7287,
+        "little_law_error_pct": 0.0,
+        "max_wip_units": 6,
+        "mean_lead_time_s": 196.7744,
+        "mean_queue_wait_s": 0.4052,
+        "n": 406,
+        "p95_queue_wait_s": 2.9874,
+        "throughput_units_per_hour": 84.9379,
+        "torque_cpk": 0.9273
+      },
+      "delta": {
+        "average_wip_units": 0.0,
+        "copq_per_1000_units_usd": -7522.17,
+        "defect_rate_pp": -9.1133,
+        "good_throughput_units_per_hour": 7.7406,
+        "mean_lead_time_s": 0.0,
+        "mean_queue_wait_s": 0.0,
+        "torque_cpk": 0.4781
+      },
+      "engineering_assumptions": {
+        "combination_order": [
+          "GAGE_RECALIBRATION"
+        ],
+        "portfolio_replay_policy": "Canonical catalog order; each action is re-estimated against the current modeled counterfactual state to avoid simple additive KPI assumptions.",
+        "total_one_time_cost_usd": 800.0,
+        "total_planned_downtime_hours": 1.0
+      },
+      "estimated_intervention_parameters": [
+        {
+          "intervention_code": "GAGE_RECALIBRATION",
+          "parameters": {
+            "effectiveness": 1.0,
+            "estimated_measurement_bias_nm": 0.853984,
+            "target": "G2"
+          },
+          "target": "G2"
+        }
+      ],
+      "ground_truth_dependency": false,
+      "intervention_codes": [
+        "GAGE_RECALIBRATION"
+      ],
+      "interventions": [
+        {
+          "code": "GAGE_RECALIBRATION",
+          "cost_usd": 800.0,
+          "downtime_hours": 1.0,
+          "evidence_score": 92.67,
+          "hypothesis_code": "GAGE_MEASUREMENT_DRIFT",
+          "label": "Recalibrate inspection gage",
+          "target": "G2"
+        }
+      ],
+      "investigator_top_code": "GAGE_MEASUREMENT_DRIFT",
+      "settings": {
+        "demand_multiplier": 1.0,
+        "effectiveness": 1.0
+      },
+      "uncertainty": {
+        "copq_per_1000_delta_usd_90pct": [
+          -10083.25,
+          -4874.38
+        ],
+        "defect_rate_pp_delta_90pct": [
+          -11.7118,
+          -6.6502
+        ],
+        "mean_unit_flow_time_delta_s_90pct": [
+          0.0,
+          0.0
+        ],
+        "method": "paired unit bootstrap; 90% interval; deterministic seed",
+        "repetitions": 250
+      }
+    },
+    "milp_oracle_agreement": null,
+    "status": "OPTIMAL_EXACT_SEARCH"
+  },
+  "release": "KAIZEN_AI_PORTFOLIO_RC1"
+}

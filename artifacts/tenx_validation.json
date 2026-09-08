@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "runtime_ms": 71662.932,
+  "project": "KAIZEN AI",
+  "ml_family": "LinUCB contextual-bandit learning",
+  "original_algorithm": "TRACE-LIFT-v1",
+  "workspace_count": 33,
+  "human_authority": "CONTINUOUS_IMPROVEMENT_ENGINEER",
+  "autonomous_execution": false,
+  "decision": {
+    "next_probe": "cross_gage_repeat",
+    "score": 2.3078300939320284
+  },
+  "counterfactual": {
+    "naive_policy": "lowest operational burden",
+    "choice": "humidity_replay",
+    "disagrees": true
+  }
+}

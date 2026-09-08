@@ -1,0 +1,28 @@
+{
+  "dataset": "UCI Condition Monitoring of Hydraulic Systems",
+  "case_study": "Hydraulic Degradation Investigation and Evidence Triage",
+  "raw_directory": "data/raw/uci_hydraulic",
+  "required_primary_files": [
+    "features.csv",
+    "targets.csv"
+  ],
+  "schema_policy": {
+    "numeric_missing_values": "allowed but must be profiled/imputed inside train-only pipeline",
+    "empty_file": "reject",
+    "hash": "SHA-256",
+    "source_mode": "explicit"
+  },
+  "decision_chain": [
+    "real observed data",
+    "derived diagnostics",
+    "predictive model",
+    "repository-authored original algorithm",
+    "OR/simulation escalation",
+    "analytical AI challenge",
+    "human approval/HOLD"
+  ],
+  "original_algorithm": "TRACE-LIFT-v1",
+  "claim_boundary": "UCI hydraulic data is public experimental condition-monitoring evidence. Bosch competition raw data is not redistributed.",
+  "human_authority": "CONTINUOUS_IMPROVEMENT_ENGINEER",
+  "autonomous_execution": false
+}

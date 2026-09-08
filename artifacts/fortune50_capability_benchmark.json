@@ -1,0 +1,92 @@
+{
+  "status": "PASS",
+  "standard": "Fortune-50 capability evidence pack v1",
+  "project": "KAIZEN_AI",
+  "signature_algorithm": "CAPE-Loop",
+  "seed": 17,
+  "scenario": "fixed_reference_decision_case",
+  "baseline_comparison": {
+    "information_value_delta": -4,
+    "cost_delta": 0
+  },
+  "decisions": {
+    "signature": {
+      "allocations": [
+        2,
+        2
+      ],
+      "cost": 4,
+      "information_value": 12
+    },
+    "baseline": {
+      "allocations": [
+        3,
+        1
+      ],
+      "cost": 4,
+      "information_value": 16
+    },
+    "ablation": {
+      "allocations": [
+        3,
+        1
+      ],
+      "cost": 4,
+      "information_value": 16
+    },
+    "sensitivity": {
+      "allocations": [
+        3,
+        3
+      ],
+      "cost": 6,
+      "information_value": 18
+    }
+  },
+  "runtime": {
+    "reference_ms": 0.067,
+    "p25_ms": 0.056,
+    "p50_ms": 0.056,
+    "p95_ms": 0.065,
+    "repeated_runs": 25
+  },
+  "reproducibility": {
+    "same_fixture_repeated": true,
+    "deterministic_seed": 17
+  },
+  "ablation": {
+    "executed": true,
+    "meaning": "declared risk/safety/balance/criticality constraint removal"
+  },
+  "sensitivity": {
+    "executed": true,
+    "meaning": "declared budget/capacity/envelope/alpha/demand perturbation"
+  },
+  "evidence_boundary": [
+    "observed",
+    "simulated",
+    "optimized",
+    "shadow_mode",
+    "realized"
+  ],
+  "enterprise_hardening": {
+    "health_route_declared": true,
+    "request_id_or_trace_header": true,
+    "human_gate_or_machine_write_block": true,
+    "frontend_native_surface": true,
+    "signature_module_present": true,
+    "manifest_present": true,
+    "source_hash_ledger_present": true
+  },
+  "implementation_paths": {
+    "signature_module": "kaizen_cape/signature_algorithm.py",
+    "native_api_or_service": [
+      "app/main.py",
+      "static/index.html"
+    ],
+    "native_ui": [
+      "static/index.html",
+      "tenx_ui/index.html"
+    ]
+  }
+}

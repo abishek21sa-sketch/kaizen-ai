@@ -1,0 +1,1 @@
+UCI Hydraulic Systems archive parsed into per-cycle sensor statistics: https://archive.ics.uci.edu/static/public/447/condition+monitoring+of+hydraulic+systems.zip

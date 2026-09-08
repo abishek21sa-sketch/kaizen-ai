@@ -1,0 +1,8 @@
+{
+  "project": "KAIZEN AI",
+  "ui_namespace": "kai-",
+  "signature_marker": "CONTINUOUS IMPROVEMENT WAR ROOM",
+  "workspace_count": 33,
+  "max_allowed_pairwise_similarity": 0.2,
+  "product_identity": "continuous-improvement A3 war room / evidence board"
+}

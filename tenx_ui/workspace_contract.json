@@ -1,0 +1,440 @@
+{
+  "actor": "Continuous Improvement Lead",
+  "decision": "diagnostic probe / controlled experiment / intervention",
+  "entity": "process hypothesis",
+  "workspaces": [
+    {
+      "workspace": "Mission Control",
+      "engineering_question": "What does Mission Control show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "DMAIC evidence queue combining defect, flow, cost, ambiguity and causal-gate state",
+      "evidence": "Evidence object: DMAIC evidence queue combining defect, flow, cost, ambiguity and causal-gate state; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable mission control evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the Mission Control evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "Define / Measure",
+      "engineering_question": "What does Define / Measure show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "Operational problem definition, CTQ metrics, baseline window and incident-scope reconstruction",
+      "evidence": "Evidence object: Operational problem definition, CTQ metrics, baseline window and incident-scope reconstruction; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable define / measure evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the Define / Measure evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "MSA",
+      "engineering_question": "What does MSA show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "Gage R&R / measurement discrimination assessment before trusting process signals",
+      "evidence": "Evidence object: Gage R&R / measurement discrimination assessment before trusting process signals; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable msa evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the MSA evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "SPC",
+      "engineering_question": "What does SPC show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "I-MR / attribute signal monitoring with fixed baseline limits and rule violations",
+      "evidence": "Evidence object: I-MR / attribute signal monitoring with fixed baseline limits and rule violations; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable spc evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the SPC evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "Capability",
+      "engineering_question": "What does Capability show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "Cp/Cpk/Pp/Ppk estimation with pre/post process capability comparison",
+      "evidence": "Evidence object: Cp/Cpk/Pp/Ppk estimation with pre/post process capability comparison; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable capability evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the Capability evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "Factory Physics",
+      "engineering_question": "What does Factory Physics show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "Flow-time, WIP, throughput and Little\u2019s Law reconstruction from event timestamps",
+      "evidence": "Evidence object: Flow-time, WIP, throughput and Little\u2019s Law reconstruction from event timestamps; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable factory physics evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the Factory Physics evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "OEE & Capacity",
+      "engineering_question": "What does OEE & Capacity show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "Availability/performance/quality decomposition plus station capacity/utilization screening",
+      "evidence": "Evidence object: Availability/performance/quality decomposition plus station capacity/utilization screening; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable oee & capacity evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the OEE & Capacity evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "Evidence Ledger",
+      "engineering_question": "What does Evidence Ledger show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "Versioned hypothesis evidence with source type, strength, ambiguity and causal authority",
+      "evidence": "Evidence object: Versioned hypothesis evidence with source type, strength, ambiguity and causal authority; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable evidence ledger evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the Evidence Ledger evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "Hypothesis Arena",
+      "engineering_question": "What does Hypothesis Arena show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "Competing explanation ranking using adjusted statistical and operational evidence",
+      "evidence": "Evidence object: Competing explanation ranking using adjusted statistical and operational evidence; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable hypothesis arena evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the Hypothesis Arena evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "TRACE-LIFT",
+      "engineering_question": "What does TRACE-LIFT show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "Resource-aware causal evidence triage selecting the next discriminating probe",
+      "evidence": "Evidence object: Resource-aware causal evidence triage selecting the next discriminating probe; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable trace-lift evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the TRACE-LIFT evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "Active Investigation",
+      "engineering_question": "What does Active Investigation show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "Sequential value-of-information investigation with uncertainty-aware stopping/abstention",
+      "evidence": "Evidence object: Sequential value-of-information investigation with uncertainty-aware stopping/abstention; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable active investigation evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the Active Investigation evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "Controlled Experiment",
+      "engineering_question": "What does Controlled Experiment show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "Predeclared randomized experiment design, confirmation criteria and causal firewall",
+      "evidence": "Evidence object: Predeclared randomized experiment design, confirmation criteria and causal firewall; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable controlled experiment evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the Controlled Experiment evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "CAPE-Loop",
+      "engineering_question": "What does CAPE-Loop show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "Binary experiment-allocation MILP under budget, downtime and run-capacity constraints",
+      "evidence": "Evidence object: Binary experiment-allocation MILP under budget, downtime and run-capacity constraints; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable cape-loop evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the CAPE-Loop evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "Intervention Simulation",
+      "engineering_question": "What does Intervention Simulation show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "Counterfactual process replay estimating defect/flow/COPQ consequences conditional on hypotheses",
+      "evidence": "Evidence object: Counterfactual process replay estimating defect/flow/COPQ consequences conditional on hypotheses; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable intervention simulation evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the Intervention Simulation evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "Improvement Portfolio",
+      "engineering_question": "What does Improvement Portfolio show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "Constrained selection of improvement actions by value, evidence and operational burden",
+      "evidence": "Evidence object: Constrained selection of improvement actions by value, evidence and operational burden; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable improvement portfolio evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the Improvement Portfolio evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "Control Plan",
+      "engineering_question": "What does Control Plan show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "Post-intervention monitoring rules, ownership, reaction limits and sustainment evidence",
+      "evidence": "Evidence object: Post-intervention monitoring rules, ownership, reaction limits and sustainment evidence; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable control plan evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the Control Plan evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "AI Investigator",
+      "engineering_question": "What does AI Investigator show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "Tool-using investigation planner that selects diagnostics, challenges hypotheses and escalates experiments",
+      "evidence": "Evidence object: Tool-using investigation planner that selects diagnostics, challenges hypotheses and escalates experiments; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable ai investigator evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the AI Investigator evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "Live Operations",
+      "engineering_question": "What does Live Operations show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "Current incident feed, evidence changes, pending probes and human decision queue",
+      "evidence": "Evidence object: Current incident feed, evidence changes, pending probes and human decision queue; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable live operations evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the Live Operations evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "Research Evidence",
+      "engineering_question": "What does Research Evidence show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "Baseline/ablation/sensitivity evidence separating association from controlled confirmation",
+      "evidence": "Evidence object: Baseline/ablation/sensitivity evidence separating association from controlled confirmation; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable research evidence evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the Research Evidence evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "Release Review",
+      "engineering_question": "What does Release Review show that would change the diagnostic probe / controlled experiment / intervention for the current process hypothesis scope?",
+      "method": "Human CI approval gate for experiments/interventions with causal-claim restrictions",
+      "evidence": "Evidence object: Human CI approval gate for experiments/interventions with causal-claim restrictions; compared with prediction uncertainty, baseline/counterfactual, provenance and current release/HOLD state.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable release review evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the Release Review evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "Data Backbone",
+      "engineering_question": "Can the next diagnostic / controlled experiment / improvement portfolio be traced to a reproducible external source rather than only a demo fixture?",
+      "method": "UCI hydraulic source contract plus local replay provenance and refresh state",
+      "evidence": "Evidence object: UCI hydraulic source contract plus local replay provenance and refresh state, with explicit external/reference data mode and claim boundary.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable data backbone evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the Data Backbone evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "Historical Intelligence",
+      "engineering_question": "How has condition degradation, evidence accumulation and intervention chronology changed across cohorts, runs or states?",
+      "method": "Pre/post process chronology, deterioration, recovery and evidence accumulation across runs",
+      "evidence": "Evidence object: Pre/post process chronology, deterioration, recovery and evidence accumulation across runs, with explicit external/reference data mode and claim boundary.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable historical intelligence evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the Historical Intelligence evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "Entity / Factor Explorer",
+      "engineering_question": "Which cycle / sensor / component / improvement hypothesis carries the highest evidence concentration?",
+      "method": "Machine, gage, material, operator and environment stratification by defect/effect signal",
+      "evidence": "Evidence object: Machine, gage, material, operator and environment stratification by defect/effect signal, with explicit external/reference data mode and claim boundary.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable entity / factor explorer evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the Entity / Factor Explorer evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "Empirical Case Study",
+      "engineering_question": "Which probe most efficiently separates competing degradation hypotheses?",
+      "method": "Hydraulic/process degradation investigation from observed shifts to controlled confirmation",
+      "evidence": "Evidence object: Hydraulic/process degradation investigation from observed shifts to controlled confirmation, with explicit external/reference data mode and claim boundary.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable empirical case study evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the Empirical Case Study evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "External Validation",
+      "engineering_question": "Which intervention deserves scarce experiment budget after evidence updates?",
+      "method": "Hydraulic public-data refresh and transferability checks against local investigation methods",
+      "evidence": "Evidence object: Hydraulic public-data refresh and transferability checks against local investigation methods, with explicit external/reference data mode and claim boundary.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable external validation evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the External Validation evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "Data Refresh",
+      "engineering_question": "Is the current analytical state fresh enough to support the next diagnostic / controlled experiment / improvement portfolio?",
+      "method": "Versioned dataset refresh, checksum, schema drift and evidence-mode promotion",
+      "evidence": "Evidence object: Versioned dataset refresh, checksum, schema drift and evidence-mode promotion, with explicit external/reference data mode and claim boundary.",
+      "required_inputs": [
+        "process hypothesis",
+        "validated source/provenance",
+        "current constraints/state"
+      ],
+      "decision_output": "Auditable data refresh evidence for diagnostic probe / controlled experiment / intervention",
+      "operator_action": "Continuous Improvement Lead reviews the Data Refresh evidence, drills into the responsible process hypothesis, then approves, holds or escalates the diagnostic probe / controlled experiment / intervention."
+    },
+    {
+      "workspace": "Investigation Campaign",
+      "engineering_question": "Which diagnostic remains the best next action across plausible incident evidence?",
+      "method": "Repeated contextual-bandit learning + TRACE-LIFT triage before causal/experiment escalation",
+      "evidence": "Selected probe frequency, learned information values and campaign evidence regret",
+      "required_inputs": [
+        "improvement hypothesis / probe / intervention",
+        "validated empirical/reference evidence",
+        "current decision constraints"
+      ],
+      "decision_output": "Auditable investigation campaign evidence for next diagnostic / controlled improvement experiment",
+      "operator_action": "Authorize the stable diagnostic probe or widen evidence collection."
+    },
+    {
+      "workspace": "Evidence Regret",
+      "engineering_question": "What information is lost by choosing the cheapest/easiest diagnostic instead?",
+      "method": "Counterfactual value gap between TRACE-LIFT selection and naive low-burden probe",
+      "evidence": "Scenario-level learned-value regret and modal probe choice",
+      "required_inputs": [
+        "improvement hypothesis / probe / intervention",
+        "validated empirical/reference evidence",
+        "current decision constraints"
+      ],
+      "decision_output": "Auditable evidence regret evidence for next diagnostic / controlled improvement experiment",
+      "operator_action": "Spend measurement effort where evidence regret justifies the burden."
+    },
+    {
+      "workspace": "Causal Challenge",
+      "engineering_question": "Is observational evidence strong enough to justify a controlled intervention test?",
+      "method": "Evidence-layer challenge against the causal firewall and controlled-experiment requirement",
+      "evidence": "Replay defect shift, discriminating probe evidence and causal-authority state",
+      "required_inputs": [
+        "improvement hypothesis / probe / intervention",
+        "validated empirical/reference evidence",
+        "current decision constraints"
+      ],
+      "decision_output": "Auditable causal challenge evidence for next diagnostic / controlled improvement experiment",
+      "operator_action": "Keep causal confirmation locked until a governed controlled experiment passes."
+    },
+    {
+      "workspace": "CAPE Portfolio",
+      "engineering_question": "How should experiment resources be allocated after diagnosis?",
+      "method": "TRACE-LIFT evidence handoff into CAPE-Loop experiment/replicate allocation",
+      "evidence": "Evidence priority, experiment budget, downtime and causal-gate state",
+      "required_inputs": [
+        "improvement hypothesis / probe / intervention",
+        "validated empirical/reference evidence",
+        "current decision constraints"
+      ],
+      "decision_output": "Auditable cape portfolio evidence for next diagnostic / controlled improvement experiment",
+      "operator_action": "Approve a bounded experiment portfolio rather than isolated ad-hoc trials."
+    },
+    {
+      "workspace": "Sustainment Monitor",
+      "engineering_question": "Will the improvement remain detectable after intervention?",
+      "method": "Control-oriented pre/post signal review with SPC/MSA evidence and rollback conditions",
+      "evidence": "Defect/capability shift, measurement reliability and control-plan triggers",
+      "required_inputs": [
+        "improvement hypothesis / probe / intervention",
+        "validated empirical/reference evidence",
+        "current decision constraints"
+      ],
+      "decision_output": "Auditable sustainment monitor evidence for next diagnostic / controlled improvement experiment",
+      "operator_action": "Sustain, rollback or re-open diagnosis based on post-intervention evidence."
+    },
+    {
+      "workspace": "CI Decision Record",
+      "engineering_question": "Can the improvement recommendation be reconstructed without granting AI causal authority?",
+      "method": "Campaign dossier linking replay evidence, bandit, TRACE-LIFT, CAPE and human approval",
+      "evidence": "Tool trace, counterfactual, evidence regret, causal lock and operator actions",
+      "required_inputs": [
+        "improvement hypothesis / probe / intervention",
+        "validated empirical/reference evidence",
+        "current decision constraints"
+      ],
+      "decision_output": "Auditable ci decision record evidence for next diagnostic / controlled improvement experiment",
+      "operator_action": "CI engineer signs the experiment decision; AI remains advisory."
+    },
+    {
+      "workspace": "Hydraulic Evidence Backbone",
+      "engineering_question": "Which observed sensor/condition evidence is active, and can TRACE-LIFT rely on it?",
+      "method": "UCI hydraulic acquisition, sensor/condition schema checks, condition-shift diagnostics and evidence-value triage",
+      "evidence": "Cycle count, feature state, condition labels, raw hashes, sensor shift ranking and current TRACE-LIFT evidence gate.",
+      "required_inputs": [
+        "validated public source/provenance",
+        "raw/canonical hash and schema state",
+        "current model/algorithm readiness"
+      ],
+      "decision_output": "Auditable hydraulic evidence backbone evidence",
+      "operator_action": "Continuous Improvement Engineer acquires/revalidates evidence before promoting a diagnostic probe into a controlled experiment."
+    }
+  ],
+  "project_title": "KAIZEN AI",
+  "campaign": "Closed-Loop Improvement Campaign",
+  "campaign_identity": "evidence regret + causal-resource frontier",
+  "depth_phase": "PROJECT_NATIVE_1P2_EXPANSION"
+}

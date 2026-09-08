@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "data_mode": "refreshed_external",
+  "source": "Condition monitoring of hydraulic systems",
+  "profile": {
+    "exists": true,
+    "path": "data\\external\\uci_447.zip",
+    "bytes": 76601704,
+    "sha256": "24128aad2ee45eea7e6b63ebbd9992cdf25d0483a2cebefbfc13bc69079af1f2",
+    "archive_member": "PS1.txt",
+    "rows": 2205,
+    "columns": 6000,
+    "data_mode": "refreshed_external"
+  },
+  "claim_boundary": "UCI hydraulic data is public experimental condition-monitoring evidence. Bosch competition raw data is not redistributed."
+}

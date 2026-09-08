@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "project": "KAIZEN AI",
+  "ui_identity": "continuous-improvement A3 war room / evidence board",
+  "ui_namespace": "kai-",
+  "workspaces": 33,
+  "checks": {
+    "signature_marker": true,
+    "namespace_depth": true,
+    "workspace_depth": true,
+    "workspace_count_matches": true,
+    "ml_lifecycle_visible": true,
+    "agent_planning_visible": true,
+    "empirical_provenance_visible": true
+  }
+}

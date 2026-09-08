@@ -1,0 +1,173 @@
+{
+  "benchmark": "KAIZEN AI V1.0 OR/data/control release gate",
+  "scope_note": "Synthetic Hidden Factory release benchmark only; not a real-factory performance estimate.",
+  "cases": 18,
+  "milp_optimal_or_matching_infeasible": 18,
+  "milp_exact_oracle_agreement": 18,
+  "control_plan_ready": 18,
+  "fabricated_realized_benefit_cases": 0,
+  "details": [
+    {
+      "scenario": "fixture_wear_temp",
+      "seed": 11,
+      "optimizer_status": "OPTIMAL_EXACT_SEARCH",
+      "milp_status": "OPTIMAL",
+      "milp_oracle_agreement": true,
+      "control_plan_ready": true,
+      "realized_benefits_fabricated": false
+    },
+    {
+      "scenario": "fixture_wear_temp",
+      "seed": 42,
+      "optimizer_status": "OPTIMAL_EXACT_SEARCH",
+      "milp_status": "OPTIMAL",
+      "milp_oracle_agreement": true,
+      "control_plan_ready": true,
+      "realized_benefits_fabricated": false
+    },
+    {
+      "scenario": "fixture_wear_temp",
+      "seed": 73,
+      "optimizer_status": "OPTIMAL_EXACT_SEARCH",
+      "milp_status": "OPTIMAL",
+      "milp_oracle_agreement": true,
+      "control_plan_ready": true,
+      "realized_benefits_fabricated": false
+    },
+    {
+      "scenario": "supplier_resin_shift",
+      "seed": 11,
+      "optimizer_status": "OPTIMAL_EXACT_SEARCH",
+      "milp_status": "OPTIMAL",
+      "milp_oracle_agreement": true,
+      "control_plan_ready": true,
+      "realized_benefits_fabricated": false
+    },
+    {
+      "scenario": "supplier_resin_shift",
+      "seed": 42,
+      "optimizer_status": "OPTIMAL_EXACT_SEARCH",
+      "milp_status": "OPTIMAL",
+      "milp_oracle_agreement": true,
+      "control_plan_ready": true,
+      "realized_benefits_fabricated": false
+    },
+    {
+      "scenario": "supplier_resin_shift",
+      "seed": 73,
+      "optimizer_status": "OPTIMAL_EXACT_SEARCH",
+      "milp_status": "OPTIMAL",
+      "milp_oracle_agreement": true,
+      "control_plan_ready": true,
+      "realized_benefits_fabricated": false
+    },
+    {
+      "scenario": "tool_calibration_drift",
+      "seed": 11,
+      "optimizer_status": "OPTIMAL_EXACT_SEARCH",
+      "milp_status": "OPTIMAL",
+      "milp_oracle_agreement": true,
+      "control_plan_ready": true,
+      "realized_benefits_fabricated": false
+    },
+    {
+      "scenario": "tool_calibration_drift",
+      "seed": 42,
+      "optimizer_status": "OPTIMAL_EXACT_SEARCH",
+      "milp_status": "OPTIMAL",
+      "milp_oracle_agreement": true,
+      "control_plan_ready": true,
+      "realized_benefits_fabricated": false
+    },
+    {
+      "scenario": "tool_calibration_drift",
+      "seed": 73,
+      "optimizer_status": "OPTIMAL_EXACT_SEARCH",
+      "milp_status": "OPTIMAL",
+      "milp_oracle_agreement": true,
+      "control_plan_ready": true,
+      "realized_benefits_fabricated": false
+    },
+    {
+      "scenario": "gage_measurement_drift",
+      "seed": 11,
+      "optimizer_status": "OPTIMAL_EXACT_SEARCH",
+      "milp_status": "OPTIMAL",
+      "milp_oracle_agreement": true,
+      "control_plan_ready": true,
+      "realized_benefits_fabricated": false
+    },
+    {
+      "scenario": "gage_measurement_drift",
+      "seed": 42,
+      "optimizer_status": "OPTIMAL_EXACT_SEARCH",
+      "milp_status": "OPTIMAL",
+      "milp_oracle_agreement": true,
+      "control_plan_ready": true,
+      "realized_benefits_fabricated": false
+    },
+    {
+      "scenario": "gage_measurement_drift",
+      "seed": 73,
+      "optimizer_status": "OPTIMAL_EXACT_SEARCH",
+      "milp_status": "OPTIMAL",
+      "milp_oracle_agreement": true,
+      "control_plan_ready": true,
+      "realized_benefits_fabricated": false
+    },
+    {
+      "scenario": "calibration_microstops",
+      "seed": 11,
+      "optimizer_status": "OPTIMAL_EXACT_SEARCH",
+      "milp_status": "OPTIMAL",
+      "milp_oracle_agreement": true,
+      "control_plan_ready": true,
+      "realized_benefits_fabricated": false
+    },
+    {
+      "scenario": "calibration_microstops",
+      "seed": 42,
+      "optimizer_status": "OPTIMAL_EXACT_SEARCH",
+      "milp_status": "OPTIMAL",
+      "milp_oracle_agreement": true,
+      "control_plan_ready": true,
+      "realized_benefits_fabricated": false
+    },
+    {
+      "scenario": "calibration_microstops",
+      "seed": 73,
+      "optimizer_status": "OPTIMAL_EXACT_SEARCH",
+      "milp_status": "OPTIMAL",
+      "milp_oracle_agreement": true,
+      "control_plan_ready": true,
+      "realized_benefits_fabricated": false
+    },
+    {
+      "scenario": "changeover_deterioration",
+      "seed": 11,
+      "optimizer_status": "OPTIMAL_EXACT_SEARCH",
+      "milp_status": "OPTIMAL",
+      "milp_oracle_agreement": true,
+      "control_plan_ready": true,
+      "realized_benefits_fabricated": false
+    },
+    {
+      "scenario": "changeover_deterioration",
+      "seed": 42,
+      "optimizer_status": "OPTIMAL_EXACT_SEARCH",
+      "milp_status": "OPTIMAL",
+      "milp_oracle_agreement": true,
+      "control_plan_ready": true,
+      "realized_benefits_fabricated": false
+    },
+    {
+      "scenario": "changeover_deterioration",
+      "seed": 73,
+      "optimizer_status": "OPTIMAL_EXACT_SEARCH",
+      "milp_status": "OPTIMAL",
+      "milp_oracle_agreement": true,
+      "control_plan_ready": true,
+      "realized_benefits_fabricated": false
+    }
+  ]
+}

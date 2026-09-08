@@ -1,0 +1,83 @@
+{
+  "project": "KAIZEN AI",
+  "release_stage": "PORTFOLIO_PUBLIC_DATA_RELEASE_CANDIDATE",
+  "platform": "Windows-first",
+  "workspaces": 32,
+  "original_algorithm": "TRACE-LIFT-v1",
+  "predictive_ml_family": "LinUCB contextual-bandit learning",
+  "decision_campaign": "Closed-Loop Improvement Campaign",
+  "campaign_identity": "evidence regret + causal-resource frontier",
+  "data_mode": "offline_reference",
+  "empirical_promotion": "REFERENCE_ONLY",
+  "human_authority": "CONTINUOUS_IMPROVEMENT_ENGINEER",
+  "autonomous_execution": false,
+  "evidence_inventory": [
+    {
+      "path": "artifacts/tenx_validation.json",
+      "sha256": "20ef3903a0b7d8fe855cc149daa907b247695fe4ba971c970a580a53e4947a2c"
+    },
+    {
+      "path": "artifacts/tenx_stress.json",
+      "sha256": "df35c1139d1580d9582cea0e417dadcea5e46d6855c943fa98c55144ded44354"
+    },
+    {
+      "path": "artifacts/airlines15x_validation.json",
+      "sha256": "558e46f882a1bb954591a58ecb8cfc196779501d54329a70eec1edad1bc6e510"
+    },
+    {
+      "path": "artifacts/final_depth_validation.json",
+      "sha256": "78595a8d12d5156de775876acb0738973afe9452dca861f83669c827ddbb9a10"
+    },
+    {
+      "path": "artifacts/intelligence_validation.json",
+      "sha256": "5fc3ec5b7a233fb1b1c13945332dd0dee99b14eabdc1dd574bbc37951e5643ae"
+    },
+    {
+      "path": "artifacts/ui_identity_validation.json",
+      "sha256": "e9b54b6da98b0978e003de9293c3428072a424c7f4bf41bc78a74586790d529a"
+    },
+    {
+      "path": "artifacts/frontend_diversity.json",
+      "sha256": "700d77fc065fd1fbae0aeb2cf237dcf38f13485937f4b35a21713373b4440dac"
+    },
+    {
+      "path": "artifacts/governance_standard_validation.json",
+      "sha256": "ac8ea9e0a96674972c2d7a74715f0241439170f02f9bc9f7bcb29514f70ddbf9"
+    },
+    {
+      "path": "PROJECT_METADATA.json",
+      "sha256": "3621a97a0b38ae47dae8baee829311f7ca1b8038c9322ee0d245514c0478b001"
+    },
+    {
+      "path": "docs/FRONTEND_DEMO_FLOW.md",
+      "sha256": "51532aba57f82d632513bbd473baa91399cbebbf1d365a2fd85eaf3edec36642"
+    },
+    {
+      "path": "artifacts/fortune50_capability_benchmark.json",
+      "sha256": "27096e66bc85e624a64579699a2a33b2ae3719e28b2f85f2e85ea8c11c85b1a4"
+    },
+    {
+      "path": "artifacts/enterprise_hardening.json",
+      "sha256": "ff5a812b59e97ee62e9fc3e05f54f06510714f09d71e36bd699548f4ec4e35e6"
+    },
+    {
+      "path": "artifacts/frontend_demo_flow.json",
+      "sha256": "053dc38120d385bbdd23a092c3a47c919077df4682b51a2aa5563dbacceeaede"
+    },
+    {
+      "path": "app/main.py",
+      "sha256": "689809d3119a7da1e626a27ff93fcb97d202a3b6092b7546a7c63ad28391a4f8"
+    }
+  ],
+  "claim_boundary": "Portfolio-grade analytical validation. External/domain validation and native dependency acceptance remain required where explicitly marked; autonomous operational execution is disabled.",
+  "product_ui_identity": "continuous-improvement A3 war room / evidence board",
+  "ai_agent": "Continuous Improvement Investigator",
+  "agent_decision_policy": "ambiguity-driven investigation and experiment allocation",
+  "ml_lifecycle_endpoint": "/api/ml/lifecycle",
+  "agent_endpoint": "/api/agent/run",
+  "frontend_similarity_method": "5-token Jaccard after removing embedded workspace contract payload",
+  "max_pairwise_frontend_similarity": 0.1321,
+  "frontend_similarity_threshold": 0.2,
+  "data_backbone": "structured public data contracts + provenance + claim ledger + project-specific empirical case",
+  "claim_ledger": "data/provenance/CLAIM_LEDGER.md"
+}

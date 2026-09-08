@@ -1,0 +1,41 @@
+{
+  "project": "KAIZEN AI",
+  "release_identity": "KAIZEN_AI",
+  "release_stage": "PORTFOLIO_FINAL_CANDIDATE",
+  "local_target": "Windows / PowerShell",
+  "workspaces": 33,
+  "original_algorithm": "TRACE-LIFT-v1",
+  "predictive_ml_family": "LinUCB contextual-bandit learning",
+  "prediction_target": "expected diagnostic information value by probe/context",
+  "decision_campaign": "Closed-Loop Improvement Campaign",
+  "campaign_identity": "evidence regret + causal-resource frontier",
+  "campaign_scenarios": 7,
+  "campaign_state": "CONTROLLED_EXPERIMENT_REVIEW",
+  "data_mode": "external_acquisition_ready",
+  "empirical_promotion": "REFERENCE_ONLY_UNTIL_REFRESH",
+  "human_authority": "CONTINUOUS_IMPROVEMENT_ENGINEER",
+  "autonomous_execution": false,
+  "clean_entrypoints": {
+    "acceptance": "scripts/windows_acceptance.ps1",
+    "workstation": "scripts/start_workstation.ps1"
+  },
+  "product_ui_identity": "continuous-improvement A3 war room / evidence board",
+  "ai_agent": "Continuous Improvement Investigator",
+  "agent_decision_policy": "ambiguity-driven investigation and experiment allocation",
+  "ml_lifecycle_endpoint": "/api/ml/lifecycle",
+  "agent_endpoint": "/api/agent/run",
+  "frontend_similarity_target": "<20% pairwise structural similarity",
+  "max_pairwise_frontend_similarity": 0.1321,
+  "frontend_diversity_status": "PASS",
+  "data_backbone": "data/raw -> processed -> contracts/dictionaries/provenance -> ML -> original algorithm -> OR/simulation -> AI -> human gate",
+  "public_data_case": "Hydraulic Degradation Investigation and Evidence Triage",
+  "claim_ledger": "data/provenance/CLAIM_LEDGER.md",
+  "public_data_model_version": "public-data-backbone-1.0",
+  "fortune50_capability_evidence": {
+    "status": "REFERENCE_READY",
+    "benchmark_artifact": "artifacts/fortune50_capability_benchmark.json",
+    "signature_endpoint": "/api/governance/signature",
+    "frontend_flow_document": "docs/FRONTEND_DEMO_FLOW.md",
+    "autonomous_execution": false
+  }
+}

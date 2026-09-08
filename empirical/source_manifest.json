@@ -1,0 +1,16 @@
+{
+  "project": "KAIZEN AI Continuous Improvement Intelligence",
+  "source_provider": "UCI Machine Learning Repository",
+  "source_name": "Condition monitoring of hydraulic systems",
+  "source_url": "https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems",
+  "download_url": "https://archive.ics.uci.edu/static/public/447/condition+monitoring+of+hydraulic+systems.zip",
+  "doi": "10.24432/C5CW21",
+  "license": "CC BY 4.0",
+  "advertised": "2,205 60-second hydraulic test-rig cycles with pressure, flow, temperature, vibration and component-condition labels",
+  "entity": "cycle / sensor / component / improvement hypothesis",
+  "historical": "condition degradation, evidence accumulation and intervention chronology",
+  "case": "hydraulic-system degradation investigation",
+  "refresh_required_for_real_data": true,
+  "offline_validation_mode": "repository reference evidence + source contract",
+  "provenance_rule": "Never label reference/synthetic fixtures as external observations."
+}

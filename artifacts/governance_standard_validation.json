@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "standard": "Portfolio Engineering Governance Pack + Signature Algorithms v1.0",
+  "project": "KAIZEN AI",
+  "signature_algorithm": "CAPE-Loop",
+  "implementation_alias": "TRACE-LIFT experiment allocation",
+  "implementation": "kaizen_cape/signature_algorithm.py",
+  "acceptance_test": "tests/test_signature_algorithm.py",
+  "checks": {
+    "signature_contract": true,
+    "research_validation_protocol": true,
+    "explicit_objective_variables_constraints": true,
+    "baseline_and_counterfactual": true,
+    "ablation_and_sensitivity": true,
+    "evidence_class_separation": true,
+    "human_authority_gate": true,
+    "signature_tests": true
+  },
+  "solver_status": "deterministic_reference_contract",
+  "feasible": true,
+  "seed": 17,
+  "scenario": "reference_signature_contract",
+  "baseline": "rank-greedy allocation by value per cost",
+  "null_hypothesis": "H0: CAPE-Loop produces no improvement or allocation change relative to the rank-greedy baseline.",
+  "ablation": "remove the balanced-allocation constraint and retain budget bounds",
+  "sensitivity": "vary the available budget multiplier and report allocation/value changes",
+  "evidence_classes": [
+    "observed",
+    "simulated",
+    "optimized",
+    "shadow_mode",
+    "realized"
+  ],
+  "coverage": {
+    "passed": true,
+    "tests": 4,
+    "executed_statement_lines": 19,
+    "statement_lines": 19,
+    "line_coverage": 1.0,
+    "coverage_status": "PASS"
+  },
+  "clean_extraction": {
+    "status": "PASS",
+    "tracked_files": 6,
+    "extracted_files": 6,
+    "package": "C:\\Users\\babbi\\Documents\\Codex\\2026-09-06\\als\\work\\governance_packages\\KAIZEN_AI.zip"
+  }
+}
