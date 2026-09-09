@@ -1,10 +1,8 @@
-## AIRLINES-1.5× DEPTH CANDIDATE
+# Kaizen AI
 
-Current release `KAIZEN_AI_FORTUNE50_AIRLINES15X_RC4` adds a live empirical/historical analysis layer, 26+ substantive workspaces, project-native domain diagnostics, external-source refresh/provenance, and AI decisions grounded in explicit evidence mode. See `docs/AIRLINES_15X_RELEASE.md`.
+## Production readiness
 
-# Fortune-50 TENX analytical release
-
-**Internal portfolio target:** Math 10/10 · UI 10/10 · AI 10/10, subject to the evidence boundaries below.
+Kaizen AI includes a live empirical and historical analysis layer, project-native domain diagnostics, external-source provenance, and AI decisions grounded in explicit evidence. See `docs/ENGINEERING_RELEASE.md`.
 
 - Repository-authored algorithm: **TRACE-LIFT-v1**
 - Unique predictive-learning family: **LinUCB contextual-bandit learning**
@@ -27,7 +25,7 @@ The first command validates prediction → decision → counterfactual → OR es
 ---
 
 
-## Portfolio RC1 — CAPE-Loop experiment governance
+## Portfolio release — CAPE-Loop experiment governance
 
 KAIZEN now includes CAPE-Loop, a binary MILP that allocates scarce investigative experiments across competing hypotheses under shared budget, downtime and run-capacity limits with diminishing information returns. The allocator can prioritize evidence generation but is structurally separated from the causal confirmation gate; observational evidence never authorizes causal claims or production writes.
 

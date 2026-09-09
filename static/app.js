@@ -88,17 +88,17 @@ async function checkAIStatus() {
   try {
     const data = await json('/api/ai/status');
     const a = data.ai;
-    aiConfigured = Boolean(a.configured);
+    aiConfigured = Boolean(a.available);
     if ($('aiProvider')) $('aiProvider').textContent = a.provider;
     if ($('aiModel')) $('aiModel').textContent = a.model;
     if ($('aiState')) {
-      $('aiState').textContent = aiConfigured ? 'GEMINI READY' : 'GEMINI NOT CONFIGURED';
+      $('aiState').textContent = a.configured ? 'GEMINI READY' : 'EVIDENCE FALLBACK READY';
       $('aiState').classList.toggle('ok', aiConfigured);
     }
     if ($('aiSetup')) {
       $('aiSetup').textContent = aiConfigured
         ? `Gemini connected through ${a.api} · ${a.sdk}. Every answer is forced through KAIZEN engineering tools before it can respond.`
-        : 'Gemini integration is installed but no API key is loaded. Copy .env.example to .env, add GEMINI_API_KEY, save, then restart KAIZEN.';
+        : 'The keyless deterministic evidence engine is active. Add GEMINI_API_KEY later for narrated tool orchestration; all engineering gates remain available now.';
     }
     if ($('askAiBtn')) $('askAiBtn').disabled = !(aiConfigured && currentRun && buildCompatible);
     if ($('redTeamBtn')) $('redTeamBtn').disabled = !(aiConfigured && currentRun && buildCompatible);
@@ -740,7 +740,7 @@ function renderAIResult(payload) {
 
 async function askKaizen(mode='ASK') {
   if (!currentRun) { alert('Break the factory first.'); return; }
-  if (!aiConfigured) { alert('Gemini is not configured. Add GEMINI_API_KEY to .env and restart KAIZEN.'); return; }
+  if (!aiConfigured) { alert('The KAIZEN evidence engine is unavailable. Refresh and retry.'); return; }
   let q = $('aiQuestion').value.trim();
   if (mode==='RED_TEAM' && q.length < 3) q = "Challenge KAIZEN's current diagnosis and recommended intervention.";
   if (q.length < 3) { alert('Ask KAIZEN a question first.'); return; }
@@ -748,11 +748,11 @@ async function askKaizen(mode='ASK') {
   const other = mode==='RED_TEAM' ? $('askAiBtn') : $('redTeamBtn');
   btn.disabled = true; other.disabled = true;
   const original = btn.textContent; btn.textContent = mode==='RED_TEAM' ? 'RED TEAMING…' : 'ANALYZING…';
-  $('aiState').textContent = 'GEMINI WORKING…';
+  $('aiState').textContent = 'EVIDENCE ENGINE WORKING…';
   try {
     const data = await json(`/api/runs/${currentRun}/ai/ask`, {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,mode})});
     renderAIResult(data);
-    $('aiState').textContent = 'GEMINI GROUNDED';
+    $('aiState').textContent = 'EVIDENCE GROUNDED';
   } catch(e) { alert(e.message); $('aiState').textContent = 'GEMINI ERROR'; }
   finally { btn.textContent=original; btn.disabled=!(aiConfigured&&currentRun&&buildCompatible); other.disabled=!(aiConfigured&&currentRun&&buildCompatible); }
 }

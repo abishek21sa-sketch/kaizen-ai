@@ -9,7 +9,7 @@ elseif (Test-Path "requirements.txt") { & .\.venv\Scripts\python.exe -m pip inst
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 & .\.venv\Scripts\python.exe scripts\run_tenx_stress.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-Write-Host "AIRLINES15X_EMPIRICAL_GATE"
-& .\.venv\Scripts\python.exe scripts\run_airlines15x_validation.py
+Write-Host "EMPIRICAL_EMPIRICAL_GATE"
+& .\.venv\Scripts\python.exe scripts\run_EMPIRICAL_validation.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 Write-Host "FORTUNE50_TENX_ACCEPTANCE=PASS"

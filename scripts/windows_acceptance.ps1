@@ -13,7 +13,7 @@ if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 & .\.venv\Scripts\python.exe .\scripts\run_tenx_stress.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-& .\.venv\Scripts\python.exe .\scripts\run_airlines15x_validation.py
+& .\.venv\Scripts\python.exe .\scripts\run_EMPIRICAL_validation.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 & .\.venv\Scripts\python.exe .\scripts\run_final_depth_validation.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
@@ -21,7 +21,7 @@ if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 & .\.venv\Scripts\python.exe .\scripts\run_ui_identity_validation.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-& .\.venv\Scripts\python.exe -m pytest -q .\tests\test_tenx_contract.py .\tests\test_airlines15x_empirical.py .\tests\test_project_campaign.py .\tests\test_intelligence_lifecycle.py
+& .\.venv\Scripts\python.exe -m pytest -q .\tests\test_tenx_contract.py .\tests\test_EMPIRICAL_empirical.py .\tests\test_project_campaign.py .\tests\test_intelligence_lifecycle.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 if (Test-Path ".\scripts\windows_real_data_acceptance.ps1") { & .\scripts\windows_real_data_acceptance.ps1; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE } }
 Write-Host "PROJECT_ACCEPTANCE=PASS"

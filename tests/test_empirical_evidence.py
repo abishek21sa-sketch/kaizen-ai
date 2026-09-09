@@ -8,4 +8,4 @@ def test_empirical_backbone_contract():
 def test_ai_dossier_contains_empirical_provenance():
  d=run_decision(); assert d.get('empirical_backbone'); assert any('provenance' in str(x).lower() for x in d.get('tool_trace',[]))
 def test_ui_has_live_empirical_workflow():
- h=(ROOT/'tenx_ui/index.html').read_text(); wc=__import__('json').loads((ROOT/'tenx_ui/workspace_contract.json').read_text()); assert '/api/airlines15x/empirical' in h and len(wc['workspaces'])>=26 and 'dataset.workspace' in h
+ h=(ROOT/'tenx_ui/index.html').read_text(); wc=__import__('json').loads((ROOT/'tenx_ui/workspace_contract.json').read_text()); assert '/api/EMPIRICAL/empirical' in h and len(wc['workspaces'])>=26 and 'dataset.workspace' in h

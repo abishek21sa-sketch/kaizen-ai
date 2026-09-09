@@ -63,6 +63,69 @@ class Provider(Protocol):
     def run(self, *, question: str, toolbox: EngineeringToolbox, mode: str) -> AIExecutionResult: ...
 
 
+class DeterministicEvidenceProvider:
+    """Keyless, tool-grounded fallback used when Gemini is unavailable."""
+
+    name = "KAIZEN deterministic evidence engine"
+    model = "engineering-rules-v1"
+
+    def run(self, *, question: str, toolbox: EngineeringToolbox, mode: str) -> AIExecutionResult:
+        investigation = toolbox.call("get_investigation_summary", {})
+        leader = investigation["top_suspect"]
+        ledger = toolbox.call(
+            "get_evidence_ledger", {"hypothesis_code": leader["code"]}
+        )
+        evidence_ids = [row["evidence_id"] for row in ledger.get("evidence", [])[:3]]
+        red_team = mode.upper() == "RED_TEAM"
+        headline = (
+            f"Challenge review for {leader['target']}"
+            if red_team
+            else f"{leader['target']} is the leading observational suspect"
+        )
+        answer = (
+            f"KAIZEN's deterministic investigation ranks {leader['target']} first "
+            f"with evidence score {leader.get('evidence_score', 'not reported')}. "
+            "This is an evidence-grounded diagnostic readout, not causal confirmation. "
+            "Review the cited ledger entries and run a controlled intervention before release."
+        )
+        return AIExecutionResult(
+            response=GroundedAIResponse(
+                mode=mode.upper(),
+                headline=headline,
+                answer=answer,
+                confidence_language="Tool-grounded observational evidence; causal authority remains locked.",
+                evidence_ids=evidence_ids,
+                engineering_references=[leader["code"], leader["target"]],
+                contradictory_evidence=[
+                    "Alternative hypotheses and confounders remain possible until controlled evidence is collected."
+                ],
+                assumptions=[
+                    "The current measurement system and source provenance remain valid for this run."
+                ],
+                unresolved_questions=[
+                    "Will a controlled intervention reproduce the predicted improvement?"
+                ],
+                recommended_next_actions=[
+                    "Inspect the evidence ledger, then authorize a bounded controlled experiment or DOE."
+                ],
+            ),
+            tool_trace=[
+                ToolTraceEntry(
+                    tool="get_investigation_summary",
+                    arguments={},
+                    result_summary=f"leader={leader['target']} evidence={leader.get('evidence_score')}",
+                ),
+                ToolTraceEntry(
+                    tool="get_evidence_ledger",
+                    arguments={"hypothesis_code": leader["code"]},
+                    result_summary=f"evidence_rows={len(ledger.get('evidence', []))}",
+                ),
+            ],
+            provider=self.name,
+            model=self.model,
+        )
+
+
 def key_configured() -> bool:
     return bool(os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY"))
 
@@ -117,6 +180,9 @@ def ai_status() -> dict[str, Any]:
         "fallback_models": model_chain[1:],
         "model_chain": model_chain,
         "configured": configured,
+        "available": True,
+        "deterministic_fallback": True,
+        "active_mode": "gemini" if configured else "deterministic-evidence",
         "key_present": key_configured(),
         "sdk_available": sdk_available(),
         "sdk": "google-genai",

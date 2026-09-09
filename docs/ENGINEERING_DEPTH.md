@@ -1,4 +1,4 @@
-# Airlines 1.5× depth target
+# production-ready depth target
 
 This release deliberately targets a product depth beyond the Airline Operations benchmark by combining an authentic external-source contract with the existing mathematical/AI stack.
 

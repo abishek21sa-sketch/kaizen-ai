@@ -13,7 +13,7 @@ checks={
   'workspace_count_matches': len(wc['workspaces'])==ident['workspace_count'],
   'ml_lifecycle_visible': '/api/ml/lifecycle' in html,
   'agent_planning_visible': '/api/agent/run' in html,
-  'empirical_provenance_visible': '/api/airlines15x/empirical' in html,
+  'empirical_provenance_visible': '/api/EMPIRICAL/empirical' in html,
 }
 status='PASS' if all(checks.values()) else 'FAIL'
 out={'status':status,'project':ident['project'],'ui_identity':ident['product_identity'],'ui_namespace':ident['ui_namespace'],'workspaces':len(wc['workspaces']),'checks':checks}

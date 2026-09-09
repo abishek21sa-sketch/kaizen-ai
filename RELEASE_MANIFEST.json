@@ -21,8 +21,8 @@
       "sha256": "df35c1139d1580d9582cea0e417dadcea5e46d6855c943fa98c55144ded44354"
     },
     {
-      "path": "artifacts/airlines15x_validation.json",
-      "sha256": "558e46f882a1bb954591a58ecb8cfc196779501d54329a70eec1edad1bc6e510"
+      "path": "artifacts/empirical_validation.json",
+      "sha256": "98904a843b51d7d51147b85fa5b7e86f63c26ed7ef81024290ea54eec5c42274"
     },
     {
       "path": "artifacts/final_depth_validation.json",
@@ -38,7 +38,7 @@
     },
     {
       "path": "artifacts/frontend_diversity.json",
-      "sha256": "700d77fc065fd1fbae0aeb2cf237dcf38f13485937f4b35a21713373b4440dac"
+      "sha256": "0c545f24a43a027935d96eb793d1ec6c7b295ce9c71919e6eb349112511aab6c"
     },
     {
       "path": "artifacts/governance_standard_validation.json",
@@ -66,7 +66,7 @@
     },
     {
       "path": "app/main.py",
-      "sha256": "689809d3119a7da1e626a27ff93fcb97d202a3b6092b7546a7c63ad28391a4f8"
+      "sha256": "725e546a7b47b6a966f1d103afa736f1c3881ac78110eed13a2920f9a4e0f0d6"
     }
   ],
   "claim_boundary": "Portfolio-grade analytical validation. External/domain validation and native dependency acceptance remain required where explicitly marked; autonomous operational execution is disabled.",

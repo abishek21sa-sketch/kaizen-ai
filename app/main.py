@@ -920,11 +920,6 @@ def ai_ask(run_id: str, payload: AIAskRequest) -> dict[str, Any]:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
     result = stored.result
     status = ai_status()
-    if not status["configured"]:
-        raise HTTPException(
-            status_code=503,
-            detail="Gemini is not configured. Set GEMINI_API_KEY or GOOGLE_API_KEY in your environment, restart KAIZEN, and retry.",
-        )
     try:
         answer = ask_kaizen(
             result.records, result.activation_unit, payload.question, mode=payload.mode,
