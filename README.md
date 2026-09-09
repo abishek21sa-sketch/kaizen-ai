@@ -1,10 +1,8 @@
-## AIRLINES-1.5× DEPTH CANDIDATE
+# Kaizen AI
 
-Current release `KAIZEN_AI_FORTUNE50_AIRLINES15X_RC4` adds a live empirical/historical analysis layer, 26+ substantive workspaces, project-native domain diagnostics, external-source refresh/provenance, and AI decisions grounded in explicit evidence mode. See `docs/AIRLINES_15X_RELEASE.md`.
+## Production readiness
 
-# Fortune-50 TENX analytical release
-
-**Internal portfolio target:** Math 10/10 · UI 10/10 · AI 10/10, subject to the evidence boundaries below.
+Kaizen AI includes a live empirical and historical analysis layer, project-native domain diagnostics, external-source provenance, and AI decisions grounded in explicit evidence. See `docs/ENGINEERING_RELEASE.md`.
 
 - Repository-authored algorithm: **TRACE-LIFT-v1**
 - Unique predictive-learning family: **LinUCB contextual-bandit learning**
@@ -27,7 +25,7 @@ The first command validates prediction → decision → counterfactual → OR es
 ---
 
 
-## Portfolio RC1 — CAPE-Loop experiment governance
+## Portfolio release — CAPE-Loop experiment governance
 
 KAIZEN now includes CAPE-Loop, a binary MILP that allocates scarce investigative experiments across competing hypotheses under shared budget, downtime and run-capacity limits with diminishing information returns. The allocator can prioritize evidence generation but is structurally separated from the causal confirmation gate; observational evidence never authorizes causal claims or production writes.
 
@@ -224,6 +222,24 @@ V1.0 release gate in this package:
 All benchmark accuracy/confirmation counts are for the deterministic synthetic Hidden Factory only; they are not real-factory performance claims.
 
 ## Windows quick start
+
+## Production deployment
+
+KAIZEN is deployed as two independent services: the static control-room UI on
+Vercel and the FastAPI engine on Render. The root `vercel.json` publishes the
+`static/` directory; `render.yaml` starts the API on Render's assigned `$PORT`
+and exposes `/health` for platform checks.
+
+1. Create the Render Blueprint from this repository and set `KAIZEN_CORS_ORIGINS`
+   to the final Vercel URL.
+2. Create the Vercel project from the same repository. Vercel uses `static/` as
+   its output directory and the UI defaults to
+   `https://kaizen-ai-api.onrender.com` outside local development.
+3. Set `GEMINI_API_KEY` only in Render if AI answers are required; never put it
+   in the Vercel project.
+
+The frontend and backend can be smoke-tested independently at `/` and `/health`
+before connecting the two domains.
 
 1. Extract the ZIP into a fresh writable folder.
 2. Close older KAIZEN terminals.

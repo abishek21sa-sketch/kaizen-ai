@@ -1,7 +1,7 @@
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
 Set-Location $root
-Write-Host "AIRLINES15X_ACCEPTANCE=START"
+Write-Host "EMPIRICAL_ACCEPTANCE=START"
 if (Test-Path ".\scripts\verify_release_integrity.py") {
   py .\scripts\verify_release_integrity.py
   if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
@@ -16,8 +16,8 @@ if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 & .\.venv\Scripts\python.exe .\scripts\run_tenx_stress.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-& .\.venv\Scripts\python.exe .\scripts\run_airlines15x_validation.py
+& .\.venv\Scripts\python.exe .\scripts\run_EMPIRICAL_validation.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-& .\.venv\Scripts\python.exe -m pytest -q .\tests\test_tenx_contract.py .\tests\test_airlines15x_empirical.py
+& .\.venv\Scripts\python.exe -m pytest -q .\tests\test_tenx_contract.py .\tests\test_EMPIRICAL_empirical.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-Write-Host "AIRLINES15X_ACCEPTANCE=PASS"
+Write-Host "EMPIRICAL_ACCEPTANCE=PASS"

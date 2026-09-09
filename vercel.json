@@ -1,0 +1,7 @@
+{
+  "outputDirectory": "static",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/static/:path*", "destination": "/:path*" }
+  ]
+}

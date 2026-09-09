@@ -38,4 +38,4 @@ Evidence is kept separate as observed, simulated, optimized, shadow-mode, and re
 
 ## Release boundary
 
-This signature is release-ready only when this contract, the research-validation protocol, the machine-readable governance artifact, the existing Airlines 1.5x gates, and the final integrity/hash checks all pass together.
+This signature is release-ready only when this contract, the research-validation protocol, the machine-readable governance artifact, the existing production-ready gates, and the final integrity/hash checks all pass together.

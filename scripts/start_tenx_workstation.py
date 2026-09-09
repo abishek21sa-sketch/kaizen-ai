@@ -20,7 +20,7 @@ class H(SimpleHTTPRequestHandler):
         if p=='/api/tenx/decision':
             try:return self._json(run_decision())
             except Exception as e:return self._json({'error':type(e).__name__,'detail':str(e)},500)
-        if p=='/api/airlines15x/empirical':
+        if p=='/api/EMPIRICAL/empirical':
             try:return self._json(run_empirical_reference())
             except Exception as e:return self._json({'error':type(e).__name__,'detail':str(e)},500)
         if p=='/api/project/campaign':

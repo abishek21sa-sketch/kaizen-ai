@@ -4,7 +4,7 @@ from typing import Any
 import re
 
 from .models import AIExecutionResult
-from .provider import GeminiInteractionsProvider, Provider, ai_status
+from .provider import DeterministicEvidenceProvider, GeminiInteractionsProvider, Provider, ai_status
 from .tools import EngineeringToolbox
 from kaizen_investigator import build_investigation_overview
 from kaizen_simulation import INTERVENTION_CATALOG
@@ -310,7 +310,12 @@ def ask_kaizen(
         raise ValueError("Question must be 4,000 characters or fewer")
 
     toolbox = EngineeringToolbox(records, activation_unit, seed=seed, line_name=line_name)
-    p = provider or GeminiInteractionsProvider()
+    if provider is not None:
+        p = provider
+    elif ai_status()["configured"]:
+        p = GeminiInteractionsProvider()
+    else:
+        p = DeterministicEvidenceProvider()
     result = p.run(question=q, toolbox=toolbox, mode=mode)
     if not result.tool_trace:
         raise RuntimeError("AI response rejected: no KAIZEN engineering tool was called")

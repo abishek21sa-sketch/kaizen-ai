@@ -1,6 +1,6 @@
-# KAIZEN AI — Airlines-1.5× Depth Candidate
+# KAIZEN AI — Production Readiness
 
-Release: `KAIZEN_AI_FORTUNE50_AIRLINES15X_RC4`
+Release: `KAIZEN_AI_FORTUNE50_EMPIRICAL_RELEASE`
 
 ## What changed
 
@@ -42,7 +42,7 @@ source provenance → schema/data-quality checks → entity/factor drilldown →
 Core/offline acceptance:
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass
-.\scripts\windows_airlines15x_acceptance.ps1
+.\scripts\windows_EMPIRICAL_acceptance.ps1
 ```
 
 External-data promotion (internet required):
@@ -54,4 +54,4 @@ External-data promotion (internet required):
 
 External-source results are claimed only when data_mode is refreshed_external or published_external_snapshot; offline_reference remains reference evidence.
 
-The label “Airlines-1.5×” is an internal portfolio-depth target relative to the latest observable Airlines evidence, not an external company certification and not a claim that reference/synthetic data is real production evidence.
+The label “production-ready” is an internal portfolio-depth target relative to the latest observable portfolio evidence, not an external company certification and not a claim that reference/synthetic data is real production evidence.

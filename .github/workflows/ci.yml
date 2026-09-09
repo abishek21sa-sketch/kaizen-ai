@@ -1,0 +1,22 @@
+name: kaizen-ci
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  engineering-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install -r requirements.txt -r requirements-dev.txt
+      - run: python -m pytest -q
+      - run: python scripts/run_empirical_validation.py
+      - run: python scripts/run_ui_identity_validation.py
+      - run: python scripts/verify_release_integrity.py
+      - run: python -m compileall -q app kaizen_ai kaizen_active kaizen_arena kaizen_cape kaizen_control kaizen_data kaizen_factory kaizen_ie kaizen_investigator kaizen_optimizer kaizen_quality kaizen_simulation

@@ -202,5 +202,5 @@
     "milp_oracle_agreement": null,
     "status": "OPTIMAL_EXACT_SEARCH"
   },
-  "release": "KAIZEN_AI_PORTFOLIO_RC1"
+  "release": "KAIZEN_AI_PORTFOLIO_RELEASE"
 }

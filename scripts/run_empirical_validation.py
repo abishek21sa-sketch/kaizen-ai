@@ -19,9 +19,9 @@ checks={
   'workspace_contract_complete':all(all(k in x for k in ['engineering_question','method','evidence','operator_action']) for x in wc.get('workspaces',[])),
   'workspace_method_uniqueness':len({x['method'] for x in wc.get('workspaces',[])})/max(1,n)>=0.90,
   'workspace_action_specificity':len({x['operator_action'] for x in wc.get('workspaces',[])})/max(1,n)>=0.90,
-  'live_empirical_endpoint_source':'/api/airlines15x/empirical' in (ROOT/'scripts/start_tenx_workstation.py').read_text(),
-  'empirical_ui_live':'/api/airlines15x/empirical' in html,
+  'live_empirical_endpoint_source':'/api/EMPIRICAL/empirical' in (ROOT/'scripts/start_tenx_workstation.py').read_text(),
+  'empirical_ui_live':'/api/EMPIRICAL/empirical' in html,
   'claim_boundary':('offline_reference'!=emp['data_mode']) or ('REFERENCE_ONLY'==emp['empirical_promotion']),
 }
 status='PASS' if all(checks.values()) else 'FAIL';out={'status':status,'checks':checks,'workspaces':n,'data_mode':emp['data_mode'],'promotion':emp['empirical_promotion'],'source':emp['source'].get('source_name'),'rows':emp['local_profile'].get('rows'),'case':emp.get('case_study',{}).get('name')}
-(ROOT/'artifacts').mkdir(exist_ok=True);(ROOT/'artifacts/airlines15x_validation.json').write_text(json.dumps(out,indent=2));print(json.dumps(out,indent=2));print('EMPIRICAL_DEPTH_VALIDATION='+status);raise SystemExit(0 if status=='PASS' else 1)
+(ROOT/'artifacts').mkdir(exist_ok=True);(ROOT/'artifacts/EMPIRICAL_validation.json').write_text(json.dumps(out,indent=2));print(json.dumps(out,indent=2));print('EMPIRICAL_DEPTH_VALIDATION='+status);raise SystemExit(0 if status=='PASS' else 1)

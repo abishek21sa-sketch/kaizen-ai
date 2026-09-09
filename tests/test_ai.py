@@ -84,6 +84,23 @@ def test_ai_grounding_accepts_real_evidence_ids_and_preserves_causal_lock():
     assert out.grounded is True
     assert out.truth_dependency is False
     assert out.causal_confirmation_unlocked is False
+
+
+def test_keyless_ai_uses_tool_grounded_deterministic_fallback(monkeypatch):
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
+    r = _run()
+    out = ask_kaizen(
+        r.records,
+        r.activation_unit,
+        "What evidence should I inspect next?",
+        seed=r.config.seed,
+        line_name=r.config.line_name,
+    )
+    assert out.provider == "KAIZEN deterministic evidence engine"
+    assert out.response.evidence_ids
+    assert out.tool_trace
+    assert out.causal_confirmation_unlocked is False
     assert out.response.evidence_ids
     assert out.response.causal_status == "NOT_CAUSALLY_CONFIRMED"
 
@@ -195,7 +212,7 @@ def test_ai_status_endpoint_exposes_capability_not_secret(monkeypatch):
     assert "secret stays local" in text
 
 
-def test_ai_api_rejects_unconfigured_runtime_without_exposing_truth(monkeypatch):
+def test_ai_api_uses_keyless_fallback_without_exposing_truth(monkeypatch):
     from fastapi.testclient import TestClient
     import app.main as main_mod
     monkeypatch.setattr(main_mod, "ai_status", lambda: {
@@ -207,8 +224,9 @@ def test_ai_api_rejects_unconfigured_runtime_without_exposing_truth(monkeypatch)
     client = TestClient(main_mod.app)
     created = client.post("/api/runs", json={"seed": 42, "units": 300, "scenario": "tool_calibration_drift"}).json()
     r = client.post(f"/api/runs/{created['run_id']}/ai/ask", json={"question": "Why M2?", "mode": "ASK"})
-    assert r.status_code == 503
-    assert "Gemini is not configured" in r.json()["detail"]
+    assert r.status_code == 200
+    assert r.json()["ai"]["provider"] == "KAIZEN deterministic evidence engine"
+    assert r.json()["ai"]["grounded"] is True
     assert "Calibration bias developing" not in r.text
 
 
