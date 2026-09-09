@@ -1,0 +1,60 @@
+# Keep the Vercel deployment frontend-only.
+#
+# Root cause of the 2026-09 static-asset 404 outage: Vercel's zero-config Python
+# runtime auto-detects ANY requirements.txt/pyproject.toml/Pipfile plus a matching
+# entrypoint file (app.py, main.py, etc. -- including the same names inside an
+# `app/` or `src/` folder, e.g. this repo's app/main.py) and deploys the WHOLE
+# repo as a Vercel Function that receives every request. That silently overrode
+# vercel.json's `outputDirectory: "static"` static hosting, and the `/static/:path*`
+# rewrite (correct for pure static hosting) then stripped the `/static` prefix
+# before the request reached the running FastAPI app, which only serves assets
+# under the `/static` mount -- producing FastAPI's own JSON 404 for every asset.
+#
+# The real backend is Render (see render.yaml / DEPLOYMENT.md); Vercel must only
+# ever serve the static/ control room and call the Render API. Excluding the
+# Python surface below prevents Vercel from ever re-detecting it as a backend to
+# run, regardless of dashboard Framework Preset settings.
+app/
+kaizen_active/
+kaizen_ai/
+kaizen_arena/
+kaizen_cape/
+kaizen_control/
+kaizen_data/
+kaizen_factory/
+kaizen_ie/
+kaizen_investigator/
+kaizen_optimizer/
+kaizen_quality/
+kaizen_simulation/
+kaizen_version.py
+requirements.txt
+requirements-dev.txt
+pytest.ini
+render.yaml
+tests/
+scripts/
+data/
+docs/
+artifacts/
+campaign/
+empirical/
+examples/
+intelligence/
+tenx/
+tenx_ui/
+.venv/
+.pytest_cache/
+__pycache__/
+.github/
+start.sh
+start_kaizen.ps1
+START_KAIZEN.bat
+.env.example
+PROJECT_METADATA.json
+RELEASE_MANIFEST.json
+SOURCE_SHA256SUMS.json
+VERSION
+README.md
+DEPLOYMENT.md
+LICENSE
